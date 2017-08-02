@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="true" />
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="h2qjQiP1Gp" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="概率与期望," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="题目gx和lc去参加noip初赛，其中有一种题型叫单项选择题，顾名思义，只有一个选项是正确答案。">
+<meta name="keywords" content="概率与期望">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[国家集训队2011]单选错位">
+<meta property="og:url" content="http://yoursite.com/2017/07/15/10/index.html">
+<meta property="og:site_name" content="MAFIA&#39;s Blog">
+<meta property="og:description" content="题目gx和lc去参加noip初赛，其中有一种题型叫单项选择题，顾名思义，只有一个选项是正确答案。">
+<meta property="og:updated_time" content="2017-07-15T07:25:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[国家集训队2011]单选错位">
+<meta name="twitter:description" content="题目gx和lc去参加noip初赛，其中有一种题型叫单项选择题，顾名思义，只有一个选项是正确答案。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/15/10/"/>
+
+
+
+
+
+  <title>[国家集训队2011]单选错位 | MAFIA's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1a9fed8865999460790b51cb2cc3ec9e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MAFIA's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/15/10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MAFIA">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://hzoi-mafia.github.io/5875.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MAFIA's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">[国家集训队2011]单选错位</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-15T15:08:15+08:00">
+                2017-07-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/题解/" itemprop="url" rel="index">
+                    <span itemprop="name">题解</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>gx和lc去参加noip初赛，其中有一种题型叫单项选择题，顾名思义，只有一个选项是正确答案。<br><a id="more"></a><br>试卷上共有n道单选题，第i道单选题有ai个选项，这ai个选项编号是1,2,3,…,ai，每个选项成为正确答案的概率都是相等的。lc采取的策略是每道题目随机写上1-ai的某个数作为答案选项，他用不了多少时间就能期望做对sigma(1/ai)道题目。gx则是认认真真地做完了这n道题目，可是等他做完的时候时间也所剩无几了，于是他匆忙地把答案抄到答题纸上，没想到抄错位了：第i道题目的答案抄到了答题纸上的第i+1道题目的位置上，特别地，第n道题目的答案抄到了第1道题目的位置上。现在gx已经走出考场没法改了，不过他还是想知道自己期望能做对几道题目，这样他就知道会不会被lc鄙视了。<br>我们假设gx没有做错任何题目，只是答案抄错位置了。</p>
+<h1 id="INPUT"><a href="#INPUT" class="headerlink" title="INPUT"></a>INPUT</h1><p>n很大，为了避免读入耗时太多，输入文件只有5个整数参数n, A, B, C, a1，由上交的程序产生数列a。下面给出pascal/C/C++的读入语句和产生序列的语句（默认从标准输入读入）：<br>// for pascal<br>readln(n,A,B,C,q[1]);<br>for i:=2 to n do<br>q[i] := (int64(q[i-1]) * A + B) mod 100000001;<br>for i:=1 to n do<br>q[i] := q[i] mod C + 1;  </p>
+<p>// for C/C++<br>scanf(“%d%d%d%d%d”,&amp;n,&amp;A,&amp;B,&amp;C,a+1);<br>for (int i=2;i&lt;=n;i++)<br>a[i] = ((long long)a[i-1] * A + B) % 100000001;<br>for (int i=1;i&lt;=n;i++)<br>a[i] = a[i] % C + 1;<br>选手可以通过以上的程序语句得到n和数列a（a的元素类型是32位整数），n和a的含义见题目描述。</p>
+<h1 id="OUTPUT"><a href="#OUTPUT" class="headerlink" title="OUTPUT"></a>OUTPUT</h1><p>输出一个实数，表示gx期望做对的题目个数，保留三位小数。</p>
+<h1 id="SAMPLE"><a href="#SAMPLE" class="headerlink" title="SAMPLE"></a>SAMPLE</h1><h2 id="INPUT-1"><a href="#INPUT-1" class="headerlink" title="INPUT"></a>INPUT</h2><p>3 2 0 4 1</p>
+<h2 id="OUTPUT-1"><a href="#OUTPUT-1" class="headerlink" title="OUTPUT"></a>OUTPUT</h2><p>1.167  </p>
+<h2 id="样例说明"><a href="#样例说明" class="headerlink" title="样例说明"></a>样例说明</h2><p>a[]={2,3,1}<br>正确答案{1,1,1}<br>gx的答案{1,1,1}<br>做对题目 3<br>出现概率 1/6 </p>
+<p>正确答案{1,2,1}<br>gx的答案{1,1,2}<br>做对题目 1<br>出现概率 1/6</p>
+<p>正确答案{1,3,1}<br>gx的答案{1,1,3}<br>做对题目 1<br>出现概率 1/6</p>
+<p>正确答案{2,1,1}<br>gx的答案{1,2,1}<br>做对题目 1<br>出现概率 1/6</p>
+<p>正确答案{2,2,1}<br>gx的答案{1,2,2}<br>做对题目 2<br>出现概率 1/6</p>
+<p>正确答案{2,3,1}<br>gx的答案{1,2,3}<br>做对题目 0<br>出现概率 1/6<br>共有6种情况，每种情况出现的概率是1/6，gx期望做对(3+1+1+1+1+0)/6 = 7/6题。（相比之下，lc随机就能期望做对11/6题）</p>
+<h1 id="数据规模"><a href="#数据规模" class="headerlink" title="数据规模"></a>数据规模</h1><p>对于30%的数据 n≤10, C≤10<br>对于80%的数据 n≤10000, C≤10<br>对于90%的数据 n≤500000, C≤100000000<br>对于100%的数据 2≤n≤10000000, 0≤A,B,C,a1≤100000000</p>
+<h1 id="解题报告"><a href="#解题报告" class="headerlink" title="解题报告"></a>解题报告</h1><p>说实话，一眼看到</p>
+<h3 id="国家集训队"><a href="#国家集训队" class="headerlink" title="国家集训队"></a>国家集训队</h3><p>我好方啊= =<br>能不能骗个20分什么的= =<br>但当我10分钟后AC顺手上了个COGS rk1时= =  </p>
+<p>  不扯了不扯了<br>  很简单的概率与期望，我们考虑:<br>  当a[i]&lt;=a[i+1]时，显然第i题的正确答案一定被第i+1题可能出现的正确答案所包含，所以概率为1/a[i+1]，而对答案的贡献又为1，所以期望也为1。<br>  反之，第i题的正确答案不一定在第i+1题的答案集合中，在的概率为a[i+1]/a[i]，而如果在该集合中，又为正确答案的概率为1/a[i+1]，两数相乘，得到总概率为1/a[i]，则期望为1/a[i]。<br>  扯了这么多，其实就是个两数max求倒数= =<br>  国家集训队竟有如此水题= =<br>  天啊= =<br>  <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">  #include&lt;iostream&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">using namespace std;</div><div class="line">inline int read()&#123;</div><div class="line">	int sum(0);</div><div class="line">	char ch(getchar());</div><div class="line">	for(;ch&lt;'0'||ch&gt;'9';ch=getchar());</div><div class="line">	for(;ch&gt;='0'&amp;&amp;ch&lt;='9';sum=sum*10+(ch^48),ch=getchar());</div><div class="line">	return sum;</div><div class="line">&#125;</div><div class="line">int n,A,B,C;</div><div class="line">int a[10000001];</div><div class="line">double ans(0);</div><div class="line">inline int gg()&#123;</div><div class="line">	freopen("nt2011_exp.in","r",stdin);</div><div class="line">	freopen("nt2011_exp.out","w",stdout);</div><div class="line">	n=read(),A=read(),B=read(),C=read(),a[1]=read();</div><div class="line">	for(int i=2;i&lt;=n;i++)</div><div class="line">		a[i]=((long long)a[i-1]*A+B)%100000001;</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		a[i]=a[i]%C+1;</div><div class="line">	for(int i=1;i&lt;n;i++)&#123;</div><div class="line">		if(a[i]&lt;=a[i+1])</div><div class="line">			ans+=1.0/(double)a[i+1];</div><div class="line">		else</div><div class="line">			ans+=1.0/(double)a[i];</div><div class="line">	&#125;</div><div class="line">	if(a[n]&lt;a[1])</div><div class="line">		ans+=1.0/(double)a[1];</div><div class="line">	else</div><div class="line">		ans+=1.0/(double)a[n];</div><div class="line">	printf("%.3f",ans);</div><div class="line">	return 0;</div><div class="line">&#125;</div><div class="line">int k(gg());</div><div class="line">int main()&#123;;&#125;</div></pre></td></tr></table></figure></p>
+<p>这么水的题= =<br>真是少见= =</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/概率与期望/" rel="tag"># 概率与期望</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/15/9/" rel="next" title="[Hnoi2013]游走">
+                <i class="fa fa-chevron-left"></i> [Hnoi2013]游走
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/15/11/" rel="prev" title="2017-7-9至2017-7-15小集训总结">
+                2017-7-9至2017-7-15小集训总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://hzoi-mafia.github.io/5875.png"
+               alt="MAFIA" />
+          <p class="site-author-name" itemprop="name">MAFIA</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Maplers/" title="我神奇的同桌hww" target="_blank">我神奇的同桌hww</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wildrage.cf/" title="大佬WXH" target="_blank">大佬WXH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/rvalue/" title="高一学长zhang司机" target="_blank">高一学长zhang司机</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/TSHugh/" title="大佬WQ" target="_blank">大佬WQ</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/LadyLex/" title="又一个大佬ZZH" target="_blank">又一个大佬ZZH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuohao.me" title="壕YZH" target="_blank">壕YZH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/ren_ivan/" title="756最帅的ryf" target="_blank">756最帅的ryf</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/radioteletscope/" title="小姨子xyz" target="_blank">小姨子xyz</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/zyf_2002" title="zyf_2002" target="_blank">zyf_2002</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Loser-of-Life/" title="interesting_byb" target="_blank">interesting_byb</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/hallmeow" title="Hallmeow's blog" target="_blank">Hallmeow's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/FOXYY/" title="hyy大佬" target="_blank">hyy大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/h_anonymity" title="ljm大佬" target="_blank">ljm大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qty2001" title="QTY's blog" target="_blank">QTY's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/forevergoodboy/" title="一哥QSY" target="_blank">一哥QSY</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/A-LEAF" title="mk(quan kai)大佬" target="_blank">mk(quan kai)大佬</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#INPUT"><span class="nav-number">2.</span> <span class="nav-text">INPUT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OUTPUT"><span class="nav-number">3.</span> <span class="nav-text">OUTPUT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SAMPLE"><span class="nav-number">4.</span> <span class="nav-text">SAMPLE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#INPUT-1"><span class="nav-number">4.1.</span> <span class="nav-text">INPUT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OUTPUT-1"><span class="nav-number">4.2.</span> <span class="nav-text">OUTPUT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样例说明"><span class="nav-number">4.3.</span> <span class="nav-text">样例说明</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据规模"><span class="nav-number">5.</span> <span class="nav-text">数据规模</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题报告"><span class="nav-number">6.</span> <span class="nav-text">解题报告</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#国家集训队"><span class="nav-number">6.0.1.</span> <span class="nav-text">国家集训队</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MAFIA</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="true" />
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="h2qjQiP1Gp" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="%dalao今天又有dalao来讲课，讲的是网络流网络流——从入门到放弃：7-29dalao讲课笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="暑假集训D5总结">
+<meta property="og:url" content="http://yoursite.com/2017/07/29/28/index.html">
+<meta property="og:site_name" content="MAFIA&#39;s Blog">
+<meta property="og:description" content="%dalao今天又有dalao来讲课，讲的是网络流网络流——从入门到放弃：7-29dalao讲课笔记">
+<meta property="og:updated_time" content="2017-07-31T03:03:39.385Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="暑假集训D5总结">
+<meta name="twitter:description" content="%dalao今天又有dalao来讲课，讲的是网络流网络流——从入门到放弃：7-29dalao讲课笔记">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/29/28/"/>
+
+
+
+
+
+  <title>暑假集训D5总结 | MAFIA's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1a9fed8865999460790b51cb2cc3ec9e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MAFIA's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/29/28/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MAFIA">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://hzoi-mafia.github.io/5875.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MAFIA's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">暑假集训D5总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T17:30:55+08:00">
+                2017-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/集训总结/" itemprop="url" rel="index">
+                    <span itemprop="name">集训总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="dalao"><a href="#dalao" class="headerlink" title="%dalao"></a>%dalao</h1><p>今天又有dalao来讲课，讲的是网络流<br><a href="https://hzoi-mafia.github.io/2017/07/29/27/" target="_blank" rel="external">网络流——从入门到放弃：7-29dalao讲课笔记</a><br><a id="more"></a><br>果然是从入门到放弃啊，dalao本来说好下午继续讲完的，然后——就没有然后了<br>重要的是，mdzz PPT上的板子是假的啊，我找了一下午正经的板子啊，本以为ljm给了个正经板子，没想到是个假的啊，好不容易准备用stdafx的权限号交一下权限题，结果：  </p>
+<blockquote>
+<p>stdafx, 很抱歉的通知您，您今天的提交次数已经达到了日上限50次，请明日再来提交。</p>
+</blockquote>
+<p>满腔怒火无处发泄啊</p>
+<h1 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h1><p>就像刚才说的，我打了一下午的板子，结果发现，板子是假的啊啊啊，我的邻接表把我卡了啊啊啊<br>然后，我就十分愤怒而又绝望地什么事都不想干了= =<br><del>据说做网络流的题不用算复杂度，都是O(能过)</del></p>
+<h1 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h1><p>今天早上雨下得好大，然而刚好赶着我们起床去机房的时间，上午就变成了大晴天- -，对于我这种来说- -，真是 <del>（亦可赛艇.jpg）</del><br>然而又是照例让两人 <del>（这就不说名字了啊喂）</del> 帮我买饭 <del>（好像今天渊渊没有买饭）</del> = =，然而晚饭终于吃了这几天来唯一一顿正常的饭= =<del>（帮你买饭哪来这么多事啊喂）</del><br>倒腾一大圈的博客，终于 <del>（把博客搞烂了）</del> 成功的换了博客主题，还顺便学习了一下mathjax的用法 <del>（不但没学会，还删了不知道什么东西）</del>，最后终于学会了语法 <del>（因为根本没有在实践中成功）</del>，嗯，好充实的一天啊 <del>（充实个鬼，乱搞了一圈还不如颓）</del><br>现在是真的不知道干什么了- -，刷不动题，写不动题解，只能默默的乱搞，还要装作很充实的样子，实际上每天起床就在盼着夜晚的来临，然后盼着假期回家，最后十分不情愿的回到高考课，我。。。  </p>
+<p>心累啊。  </p>
+<p>想当初我在博客上是怎么写的？  </p>
+<blockquote>
+<p>总之就是这样了，赶紧放假，等着下次集训呢</p>
+</blockquote>
+<p>但，当几乎没有的暑假已经过去，盼望的集训到来，我现在又是什么心情呢。<br>我不知道我是怎么想的，事实上可能也不会有谁知道了吧。</p>
+<h1 id="继续唱歌？"><a href="#继续唱歌？" class="headerlink" title="继续唱歌？"></a>继续唱歌？</h1><p>《Beautiful》——Eminem</p>
+<blockquote>
+<p>Lately I’ve been hard to reach.<br>I’ve too long on my own.<br>Everybody has a private world where they can be alone.<br>Are you calling me?<br>Are you trying to get through?<br>Are you reaching out for me?<br>I’m gonna reaching out for you.  </p>
+<p>Walk in my shoes<br>Just to see<br>What is like<br>To be me<br>I’ll be you<br>Let trade shoes<br>Just to see that would we like to<br>Feel your pain<br>You feel mine<br>Go inside to each other’s life<br>Just to see<br>What we would find<br>Look at shit in each other’s eye<br>But don’t let them say you ain’t beautiful oooh<br>They can all get fucked,just stay true to you sooh<br>But don’t let them say you ain’t beautiful oooh<br>They can all get fucked,just stay true to you sooh  </p>
+</blockquote>
+<p>一首歌，一种心情</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/29/27/" rel="next" title="2017-7-29 大佬讲课笔记">
+                <i class="fa fa-chevron-left"></i> 2017-7-29 大佬讲课笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/30/29/" rel="prev" title="Password">
+                Password <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://hzoi-mafia.github.io/5875.png"
+               alt="MAFIA" />
+          <p class="site-author-name" itemprop="name">MAFIA</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Maplers/" title="我神奇的同桌hww" target="_blank">我神奇的同桌hww</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wildrage.cf/" title="大佬WXH" target="_blank">大佬WXH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/rvalue/" title="高一学长zhang司机" target="_blank">高一学长zhang司机</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/TSHugh/" title="大佬WQ" target="_blank">大佬WQ</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/LadyLex/" title="又一个大佬ZZH" target="_blank">又一个大佬ZZH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuohao.me" title="壕YZH" target="_blank">壕YZH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/ren_ivan/" title="756最帅的ryf" target="_blank">756最帅的ryf</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/radioteletscope/" title="小姨子xyz" target="_blank">小姨子xyz</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/zyf_2002" title="zyf_2002" target="_blank">zyf_2002</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Loser-of-Life/" title="interesting_byb" target="_blank">interesting_byb</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/hallmeow" title="Hallmeow's blog" target="_blank">Hallmeow's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/FOXYY/" title="hyy大佬" target="_blank">hyy大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/h_anonymity" title="ljm大佬" target="_blank">ljm大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qty2001" title="QTY's blog" target="_blank">QTY's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/forevergoodboy/" title="一哥QSY" target="_blank">一哥QSY</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/A-LEAF" title="mk(quan kai)大佬" target="_blank">mk(quan kai)大佬</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#dalao"><span class="nav-number">1.</span> <span class="nav-text">%dalao</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#刷题"><span class="nav-number">2.</span> <span class="nav-text">刷题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生活"><span class="nav-number">3.</span> <span class="nav-text">生活</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继续唱歌？"><span class="nav-number">4.</span> <span class="nav-text">继续唱歌？</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MAFIA</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

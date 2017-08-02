@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="true" />
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="h2qjQiP1Gp" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="数学 暴搜？？？," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="题目阴天傍晚车窗外未来有一个人在等待向左向右向前看爱要拐几个弯才来我遇见谁会有怎样的对白我等的人他在多远的未来我听见风来自地铁和人海我排着队拿着爱的号码牌">
+<meta name="keywords" content="数学 暴搜？？？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[JLOI2014]聪明的燕姿">
+<meta property="og:url" content="http://yoursite.com/2017/07/12/3/index.html">
+<meta property="og:site_name" content="MAFIA&#39;s Blog">
+<meta property="og:description" content="题目阴天傍晚车窗外未来有一个人在等待向左向右向前看爱要拐几个弯才来我遇见谁会有怎样的对白我等的人他在多远的未来我听见风来自地铁和人海我排着队拿着爱的号码牌">
+<meta property="og:updated_time" content="2017-07-12T22:12:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[JLOI2014]聪明的燕姿">
+<meta name="twitter:description" content="题目阴天傍晚车窗外未来有一个人在等待向左向右向前看爱要拐几个弯才来我遇见谁会有怎样的对白我等的人他在多远的未来我听见风来自地铁和人海我排着队拿着爱的号码牌">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/12/3/"/>
+
+
+
+
+
+  <title>[JLOI2014]聪明的燕姿 | MAFIA's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1a9fed8865999460790b51cb2cc3ec9e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MAFIA's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/12/3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MAFIA">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://hzoi-mafia.github.io/5875.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MAFIA's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">[JLOI2014]聪明的燕姿</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-12T08:03:11+08:00">
+                2017-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/题解/" itemprop="url" rel="index">
+                    <span itemprop="name">题解</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>阴天傍晚车窗外<br>未来有一个人在等待<br>向左向右向前看<br>爱要拐几个弯才来<br>我遇见谁会有怎样的对白<br>我等的人他在多远的未来<br>我听见风来自地铁和人海<br>我排着队拿着爱的号码牌<br><a id="more"></a><br>城市中人们总是拿着号码牌，不停寻找，不断匹配，可是谁也不知道自己等的那个人是谁。可是燕姿不一样，燕姿知道自己等的人是谁，因为燕姿数学学得好！燕姿发现了一个神奇的算法：假设自己的号码牌上写着数字S，那么自己等的人手上的号码牌数字的所有正约数之和必定等于S<br>所以燕姿总是拿着号码牌在地铁和人海找数字（喂！这样真的靠谱吗）可是她忙着唱《绿光》，想拜托你写一个程序能够快速地找到所有自己等的人。<br>（莫名唱了起来= =）</p>
+<h1 id="INPUT"><a href="#INPUT" class="headerlink" title="INPUT"></a>INPUT</h1><p>输入包含k组数据（k&lt;=100）对于每组数据，输入包含一个号码牌S(S&lt;=10^9)</p>
+<h1 id="OUTPUT"><a href="#OUTPUT" class="headerlink" title="OUTPUT"></a>OUTPUT</h1><p>对于每组数据，输出有两行，第一行包含一个整数m，表示有m个等的人，第二行包含相应的m个数，表示所有等的人的号码牌。<br>注意：你输出的号码牌必须按照升序排列。</p>
+<h1 id="SAMPLE"><a href="#SAMPLE" class="headerlink" title="SAMPLE"></a>SAMPLE</h1><h2 id="INPUT-1"><a href="#INPUT-1" class="headerlink" title="INPUT"></a>INPUT</h2><p>42</p>
+<h2 id="OUTPUT-1"><a href="#OUTPUT-1" class="headerlink" title="OUTPUT"></a>OUTPUT</h2><p>3<br>20 26 41</p>
+<h1 id="解题报告"><a href="#解题报告" class="headerlink" title="解题报告"></a>解题报告</h1><p>考试的时候，一看就知道A不了，打了个极其暴力的程序= =<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">find</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> x)</span></span>&#123;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">ret</span><span class="params">(<span class="number">0</span>)</span></span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i*i&lt;=x;i++)&#123;</div><div class="line">		<span class="keyword">if</span>(x%i==<span class="number">0</span>)</div><div class="line">			ret+=i,ret+=x%i;</div><div class="line">		<span class="keyword">if</span>(i*i==x)</div><div class="line">			ret-=i;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(ret==s)</div><div class="line">		ans++;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>结果显然= =<br>正解则是个很神奇的东西<br>唯一分解定理：任何大于１的自然数，都可以唯一分解成有限个质数的乘积<br>即：n=p1^k1×p2^k2…×pa^ka<br>那么何不预处理出来一大圈质数，然后dfs出唯一分解式呢<br>n=p1^k1×p2^k2..×pa^ka<br>因数和即可表示成（p1+p1^2+…+p1^k1）…<br>那么我们就可以dfs了<br>（我实在不会数学啊QAQ）<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div></pre></td><td class="code"><pre><div class="line">#include&lt;algorithm&gt;</div><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">using namespace std;</div><div class="line">typedef long long L;</div><div class="line">L s;</div><div class="line">L prime[100001],num_prime(0);</div><div class="line">bool flag[100001];</div><div class="line">inline void play_table()&#123;</div><div class="line">    memset(flag,true,sizeof(flag));</div><div class="line">    flag[0]=flag[1]=false;</div><div class="line">    for(int i=2;i&lt;100000;i++)&#123;</div><div class="line">        if(flag[i])</div><div class="line">            prime[++num_prime]=i;</div><div class="line">        for(int j=1;j&lt;=num_prime&amp;&amp;prime[j]*i&lt;100000;j++)&#123;</div><div class="line">            flag[i*prime[j]]=false;</div><div class="line">            if(i%prime[j]==0)</div><div class="line">                break;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">L ans[1000001],top(0);</div><div class="line">int ppp[4]=&#123;2,3,5,7&#125;;</div><div class="line">/*inline int modular_exp(int a,int m,int n)&#123;</div><div class="line">    if(m==0)</div><div class="line">        return 1;</div><div class="line">    if(m==1)</div><div class="line">        return a%n;</div><div class="line">    L w(modular_exp(a,m&gt;&gt;1,n));</div><div class="line">    w=w*w%n;</div><div class="line">    if(w&amp;1)</div><div class="line">        w=w*a%n;</div><div class="line">    return w;</div><div class="line">&#125;</div><div class="line">inline bool check(L x)&#123;</div><div class="line">    if(x==2||x==3||x==5||x==7)</div><div class="line">        return true;</div><div class="line">    for(int i=0;i&lt;4;i++)</div><div class="line">        if(modular_exp(ppp[i],x,x)!=ppp[i])</div><div class="line">            return false;</div><div class="line">    return true;</div><div class="line">&#125;*/</div><div class="line">inline bool check(L x)&#123;</div><div class="line">    for(int i=1;prime[i]*prime[i]&lt;=x;i++)</div><div class="line">        if(x%prime[i]==0)</div><div class="line">            return false;</div><div class="line">    return true;</div><div class="line">&#125;</div><div class="line">inline void dfs(L st,L pos,L now)&#123;</div><div class="line">    if(st==1)&#123;</div><div class="line">        ans[++top]=now;</div><div class="line">        return;</div><div class="line">    &#125;</div><div class="line">    if((st-1)&gt;prime[pos]&amp;&amp;check(st-1))</div><div class="line">        ans[++top]=now*(st-1);</div><div class="line">    for(int i=pos+1;prime[i]*prime[i]&lt;=st;i++)&#123;</div><div class="line">        L t(1),al(1);</div><div class="line">        for(int j=1;t&lt;=st;j++)&#123;</div><div class="line">            al*=prime[i];</div><div class="line">            t+=al;</div><div class="line">            if(st%t==0)</div><div class="line">                dfs(st/t,i,now*al);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">int main()&#123;</div><div class="line">    play_table();</div><div class="line">    while(scanf("%lld",&amp;s)==1)&#123;</div><div class="line">        top=0;</div><div class="line">        dfs(s,0,1);</div><div class="line">        sort(ans+1,ans+top+1);</div><div class="line">        printf("%lld\n",top);</div><div class="line">        for(int i=1;i&lt;top;i++)</div><div class="line">            printf("%lld ",ans[i]);</div><div class="line">        if(top!=0)</div><div class="line">            printf("%lld\n",ans[top]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>ps：本来想打Miller-Rabin的，然后就gg了QAQ</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数学-暴搜？？？/" rel="tag"># 数学 暴搜？？？</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/12/2/" rel="next" title="[NOI2008]假面舞会">
+                <i class="fa fa-chevron-left"></i> [NOI2008]假面舞会
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/12/4/" rel="prev" title="[Tyvj 1728]普通平衡树">
+                [Tyvj 1728]普通平衡树 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://hzoi-mafia.github.io/5875.png"
+               alt="MAFIA" />
+          <p class="site-author-name" itemprop="name">MAFIA</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Maplers/" title="我神奇的同桌hww" target="_blank">我神奇的同桌hww</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wildrage.cf/" title="大佬WXH" target="_blank">大佬WXH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/rvalue/" title="高一学长zhang司机" target="_blank">高一学长zhang司机</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/TSHugh/" title="大佬WQ" target="_blank">大佬WQ</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/LadyLex/" title="又一个大佬ZZH" target="_blank">又一个大佬ZZH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuohao.me" title="壕YZH" target="_blank">壕YZH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/ren_ivan/" title="756最帅的ryf" target="_blank">756最帅的ryf</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/radioteletscope/" title="小姨子xyz" target="_blank">小姨子xyz</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/zyf_2002" title="zyf_2002" target="_blank">zyf_2002</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Loser-of-Life/" title="interesting_byb" target="_blank">interesting_byb</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/hallmeow" title="Hallmeow's blog" target="_blank">Hallmeow's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/FOXYY/" title="hyy大佬" target="_blank">hyy大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/h_anonymity" title="ljm大佬" target="_blank">ljm大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qty2001" title="QTY's blog" target="_blank">QTY's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/forevergoodboy/" title="一哥QSY" target="_blank">一哥QSY</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/A-LEAF" title="mk(quan kai)大佬" target="_blank">mk(quan kai)大佬</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#INPUT"><span class="nav-number">2.</span> <span class="nav-text">INPUT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OUTPUT"><span class="nav-number">3.</span> <span class="nav-text">OUTPUT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SAMPLE"><span class="nav-number">4.</span> <span class="nav-text">SAMPLE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#INPUT-1"><span class="nav-number">4.1.</span> <span class="nav-text">INPUT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OUTPUT-1"><span class="nav-number">4.2.</span> <span class="nav-text">OUTPUT</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题报告"><span class="nav-number">5.</span> <span class="nav-text">解题报告</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MAFIA</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="true" />
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="h2qjQiP1Gp" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="各种平衡树，treap首题," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="题目您需要写一种数据结构（可参考题目标题），来维护一些数，其中需要提供以下操作：">
+<meta name="keywords" content="各种平衡树，treap首题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Tyvj 1728]普通平衡树">
+<meta property="og:url" content="http://yoursite.com/2017/07/12/4/index.html">
+<meta property="og:site_name" content="MAFIA&#39;s Blog">
+<meta property="og:description" content="题目您需要写一种数据结构（可参考题目标题），来维护一些数，其中需要提供以下操作：">
+<meta property="og:updated_time" content="2017-07-12T22:12:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[Tyvj 1728]普通平衡树">
+<meta name="twitter:description" content="题目您需要写一种数据结构（可参考题目标题），来维护一些数，其中需要提供以下操作：">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/12/4/"/>
+
+
+
+
+
+  <title>[Tyvj 1728]普通平衡树 | MAFIA's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1a9fed8865999460790b51cb2cc3ec9e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MAFIA's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/12/4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MAFIA">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://hzoi-mafia.github.io/5875.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MAFIA's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">[Tyvj 1728]普通平衡树</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-12T11:25:11+08:00">
+                2017-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/题解/" itemprop="url" rel="index">
+                    <span itemprop="name">题解</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>您需要写一种数据结构（可参考题目标题），来维护一些数，其中需要提供以下操作：<br><a id="more"></a></p>
+<ol>
+<li>插入x数</li>
+<li>删除x数(若有多个相同的数，因只删除一个)</li>
+<li>查询x数的排名(若有多个相同的数，因输出最小的排名)</li>
+<li>查询排名为x的数</li>
+<li>求x的前驱(前驱定义为小于x，且最大的数)</li>
+<li>求x的后继(后继定义为大于x，且最小的数)  </li>
+</ol>
+<h1 id="INPUT"><a href="#INPUT" class="headerlink" title="INPUT"></a>INPUT</h1><p>第一行为n，表示操作的个数,下面n行每行有两个数opt和x，opt表示操作的序号(1&lt;=opt&lt;=6)</p>
+<h1 id="OUTPUT"><a href="#OUTPUT" class="headerlink" title="OUTPUT"></a>OUTPUT</h1><p>对于操作3,4,5,6每行输出一个数，表示对应答案</p>
+<h1 id="SAMPLE"><a href="#SAMPLE" class="headerlink" title="SAMPLE"></a>SAMPLE</h1><h2 id="INPUT-1"><a href="#INPUT-1" class="headerlink" title="INPUT"></a>INPUT</h2><p>10<br>1 106465<br>4 1<br>1 317721<br>1 460929<br>1 644985<br>1 84185<br>1 89851<br>6 81968<br>1 492737<br>5 493598</p>
+<h2 id="OUTPUT-1"><a href="#OUTPUT-1" class="headerlink" title="OUTPUT"></a>OUTPUT</h2><p>106465<br>84185<br>492737</p>
+<h1 id="解题报告"><a href="#解题报告" class="headerlink" title="解题报告"></a>解题报告</h1><p>一道裸的平衡树板子题，也是我的Treap首题，留念<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cstdlib&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">using namespace std;</div><div class="line">inline int read()&#123;</div><div class="line">	int sum(0),f(1);</div><div class="line">	char ch(getchar());</div><div class="line">	while(ch&lt;'0'||ch&gt;'9')&#123;</div><div class="line">		if(ch=='-')</div><div class="line">			f=-1;</div><div class="line">		ch=getchar();</div><div class="line">	&#125;</div><div class="line">	while(ch&gt;='0'&amp;&amp;ch&lt;='9')&#123;</div><div class="line">		sum=sum*10+ch-'0';</div><div class="line">		ch=getchar();</div><div class="line">	&#125;</div><div class="line">	return sum*f;</div><div class="line">&#125;</div><div class="line">struct node&#123;</div><div class="line">	int size,key,v;</div><div class="line">	node *ch[2];</div><div class="line">	node():size(1),key(rand()),v(0)&#123;</div><div class="line">		ch[0]=ch[1]=NULL;</div><div class="line">	&#125;</div><div class="line">	node(int x):size(1),key(rand()),v(x)&#123;</div><div class="line">		ch[0]=ch[1]=NULL;</div><div class="line">	&#125;</div><div class="line">&#125;*root;</div><div class="line">inline int get_size(node *x)&#123;</div><div class="line">	if(x==NULL)</div><div class="line">		return 0;</div><div class="line">	return x-&gt;size;</div><div class="line">&#125;</div><div class="line">inline void pushup(node *rt)&#123;</div><div class="line">	rt-&gt;size=get_size(rt-&gt;ch[0])+get_size(rt-&gt;ch[1])+1;</div><div class="line">&#125;</div><div class="line">inline void ro(node *&amp;rt,int d)&#123;</div><div class="line">	node *tmp(rt-&gt;ch[d^1]);</div><div class="line">	rt-&gt;ch[d^1]=tmp-&gt;ch[d];</div><div class="line">	pushup(rt);</div><div class="line">	tmp-&gt;ch[d]=rt;</div><div class="line">	pushup(tmp);</div><div class="line">	rt=tmp;</div><div class="line">&#125;</div><div class="line">inline void insert(node *&amp;rt,int x)&#123;</div><div class="line">	if(!rt)&#123;</div><div class="line">		rt=new node(x);</div><div class="line">		return;</div><div class="line">	&#125;</div><div class="line">	int d(rt-&gt;v&gt;x);</div><div class="line">	insert(rt-&gt;ch[d^1],x);</div><div class="line">	pushup(rt);</div><div class="line">	if(rt-&gt;ch[d^1]-&gt;key&gt;rt-&gt;key)</div><div class="line">		ro(rt,d);</div><div class="line">&#125;</div><div class="line">inline void del(node *&amp;rt,int x)&#123;</div><div class="line">	if(rt-&gt;v==x)&#123;</div><div class="line">		if(rt-&gt;ch[0]!=NULL&amp;&amp;rt-&gt;ch[1]!=NULL)&#123;</div><div class="line">			int d(rt-&gt;ch[0]-&gt;key&gt;rt-&gt;ch[1]-&gt;key);</div><div class="line">			ro(rt,d);</div><div class="line">			del(rt-&gt;ch[d],x);</div><div class="line">		&#125;</div><div class="line">		else&#123;</div><div class="line">			node *tmp=NULL;</div><div class="line">			if(rt-&gt;ch[0]!=NULL)</div><div class="line">				tmp=rt-&gt;ch[0];</div><div class="line">			else</div><div class="line">				tmp=rt-&gt;ch[1];</div><div class="line">			delete rt;</div><div class="line">			rt=tmp;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	else&#123;</div><div class="line">		int d(rt-&gt;v&gt;x);</div><div class="line">		del(rt-&gt;ch[d^1],x);</div><div class="line">	&#125;</div><div class="line">	if(rt!=NULL)</div><div class="line">		pushup(rt);</div><div class="line">&#125;</div><div class="line">inline int rk(int x)&#123;</div><div class="line">	node *rt(root);</div><div class="line">	int ret(0);</div><div class="line">	while(rt)&#123;</div><div class="line">		if(x&gt;rt-&gt;v)&#123;</div><div class="line">			ret+=get_size(rt-&gt;ch[0])+1;</div><div class="line">			rt=rt-&gt;ch[1];</div><div class="line">		&#125;</div><div class="line">		else</div><div class="line">			rt=rt-&gt;ch[0];</div><div class="line">	&#125;</div><div class="line">	return ret;</div><div class="line">&#125;</div><div class="line">inline int kth(int k)&#123;</div><div class="line">	node *rt(root);</div><div class="line">	while(rt)&#123;</div><div class="line">		if(get_size(rt-&gt;ch[0])+1==k)</div><div class="line">			return rt-&gt;v;</div><div class="line">		if(get_size(rt-&gt;ch[0])+1&gt;k)</div><div class="line">			rt=rt-&gt;ch[0];</div><div class="line">		else&#123;</div><div class="line">			k-=get_size(rt-&gt;ch[0])+1;</div><div class="line">			rt=rt-&gt;ch[1];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return 0;</div><div class="line">&#125;</div><div class="line">inline int gg()&#123;</div><div class="line">	freopen("phs.in","r",stdin);</div><div class="line">	freopen("phs.out","w",stdout);</div><div class="line">	srand(time(NULL));</div><div class="line">	int n(read());</div><div class="line">	while(n--)&#123;</div><div class="line">		int op(read()),x(read());</div><div class="line">		if(op==1)&#123;</div><div class="line">			insert(root,x);</div><div class="line">			continue;</div><div class="line">		&#125;</div><div class="line">		if(op==2)&#123;</div><div class="line">			del(root,x);</div><div class="line">			continue;</div><div class="line">		&#125;</div><div class="line">		if(op==3)&#123;</div><div class="line">			printf("%d\n",rk(x)+1);</div><div class="line">			continue;</div><div class="line">		&#125;</div><div class="line">		if(op==4)&#123;</div><div class="line">			printf("%d\n",kth(x));</div><div class="line">			continue;</div><div class="line">		&#125;</div><div class="line">		if(op==5)&#123;</div><div class="line">			printf("%d\n",kth(rk(x)));</div><div class="line">			continue;</div><div class="line">		&#125;</div><div class="line">		if(op==6)&#123;</div><div class="line">			printf("%d\n",kth(rk(x+1)+1));</div><div class="line">			continue;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">int k(gg());</div><div class="line">int main()&#123;;&#125;</div></pre></td></tr></table></figure></p>
+<p>玄学板子，调的时间比打的时间还长= =<br>ps：参数类型一定要写对QWQ</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/各种平衡树，treap首题/" rel="tag"># 各种平衡树，treap首题</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/12/3/" rel="next" title="[JLOI2014]聪明的燕姿">
+                <i class="fa fa-chevron-left"></i> [JLOI2014]聪明的燕姿
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/12/5/" rel="prev" title="[HNOI2008]GT考试">
+                [HNOI2008]GT考试 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://hzoi-mafia.github.io/5875.png"
+               alt="MAFIA" />
+          <p class="site-author-name" itemprop="name">MAFIA</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Maplers/" title="我神奇的同桌hww" target="_blank">我神奇的同桌hww</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wildrage.cf/" title="大佬WXH" target="_blank">大佬WXH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/rvalue/" title="高一学长zhang司机" target="_blank">高一学长zhang司机</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/TSHugh/" title="大佬WQ" target="_blank">大佬WQ</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/LadyLex/" title="又一个大佬ZZH" target="_blank">又一个大佬ZZH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuohao.me" title="壕YZH" target="_blank">壕YZH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/ren_ivan/" title="756最帅的ryf" target="_blank">756最帅的ryf</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/radioteletscope/" title="小姨子xyz" target="_blank">小姨子xyz</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/zyf_2002" title="zyf_2002" target="_blank">zyf_2002</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Loser-of-Life/" title="interesting_byb" target="_blank">interesting_byb</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/hallmeow" title="Hallmeow's blog" target="_blank">Hallmeow's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/FOXYY/" title="hyy大佬" target="_blank">hyy大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/h_anonymity" title="ljm大佬" target="_blank">ljm大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qty2001" title="QTY's blog" target="_blank">QTY's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/forevergoodboy/" title="一哥QSY" target="_blank">一哥QSY</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/A-LEAF" title="mk(quan kai)大佬" target="_blank">mk(quan kai)大佬</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#INPUT"><span class="nav-number">2.</span> <span class="nav-text">INPUT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OUTPUT"><span class="nav-number">3.</span> <span class="nav-text">OUTPUT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SAMPLE"><span class="nav-number">4.</span> <span class="nav-text">SAMPLE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#INPUT-1"><span class="nav-number">4.1.</span> <span class="nav-text">INPUT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OUTPUT-1"><span class="nav-number">4.2.</span> <span class="nav-text">OUTPUT</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题报告"><span class="nav-number">5.</span> <span class="nav-text">解题报告</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MAFIA</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

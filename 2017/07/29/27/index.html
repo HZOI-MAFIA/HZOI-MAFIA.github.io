@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="true" />
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="h2qjQiP1Gp" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="网络流虽然dalao声音不大，但是很好听呢。不过dalao很快的进入正经主题了呢。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2017-7-29 大佬讲课笔记">
+<meta property="og:url" content="http://yoursite.com/2017/07/29/27/index.html">
+<meta property="og:site_name" content="MAFIA&#39;s Blog">
+<meta property="og:description" content="网络流虽然dalao声音不大，但是很好听呢。不过dalao很快的进入正经主题了呢。">
+<meta property="og:updated_time" content="2017-07-31T02:53:20.519Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2017-7-29 大佬讲课笔记">
+<meta name="twitter:description" content="网络流虽然dalao声音不大，但是很好听呢。不过dalao很快的进入正经主题了呢。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/29/27/"/>
+
+
+
+
+
+  <title>2017-7-29 大佬讲课笔记 | MAFIA's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1a9fed8865999460790b51cb2cc3ec9e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MAFIA's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/29/27/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MAFIA">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://hzoi-mafia.github.io/5875.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MAFIA's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2017-7-29 大佬讲课笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T07:24:55+08:00">
+                2017-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="网络流"><a href="#网络流" class="headerlink" title="网络流"></a>网络流</h1><p>虽然dalao声音不大，但是很好听呢。不过dalao很快的进入正经主题了呢。<br><a id="more"></a></p>
+<h2 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h2><ol>
+<li>有n个点，m条有向边，其中源点 s 只有出边，没有入边。汇点 t 只有入边，没有出边。</li>
+<li>每条边都有一个容量和流量，通常用c(u,v)表示从u到v的容量，f(u,v)代表流量。</li>
+</ol>
+<p>我们可以把这些有向边想象成运输管道，有一定数量的物品，从源点 s 出发，经过这些管道，最终流入汇点t，而每条管道的运输单个物品的次数是有限的。</p>
+<h2 id="可行流"><a href="#可行流" class="headerlink" title="可行流"></a>可行流</h2><ul>
+<li>源点s的总流出量等于汇点t的总流入量</li>
+<li>其它点的总流入量等于总流出量</li>
+<li>每条边的流量不超过容量上限</li>
+</ul>
+<h2 id="增广路"><a href="#增广路" class="headerlink" title="增广路"></a>增广路</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><blockquote>
+<p>假设有这样一条路径，从源点s一直到汇点t每条边的已用流量都小于容量，那我们便能找到在这条路径上能够增加的流量的最大值 val = min{c(u,v)-f(u,v)}。加上这个值后，这个流依然是可行流，而这条路径就是增广路。</p>
+</blockquote>
+<p>残余网络：每条边减去已用的流量，再在反向边上加上相同的流量。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>从零流开始不断寻找增广路</p>
+<h3 id="依据"><a href="#依据" class="headerlink" title="依据"></a>依据</h3><blockquote>
+<p>增广路定理：<br>假如当前残余网络中仍能找到一条增广路，那么当前的可行流仍可以增大，不是最大流。反之，如果到了“无路可增”的地步，当前流就是最大流。</p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><ul>
+<li>为什么要加反向边？<br>首先，假如没有反向边的话，那么找增广路其实是需要按照一定的组合，才能找到最大流。<br>也就是说，我们无法在找到一条增广路时，确保这样可能是一种可行的最大流的方案。<br>因此，我们需要对前面的方案进行调整，比如有的边流量不需要使用，需要“退”回去，反向边就起到这样的作用。  </li>
+<li>在实际运行过程中反向边与原来的边是没有区分的，这样一步步找增广路就可以确保最终为最大流。</li>
+</ul>
+</blockquote>
+<h3 id="EdmondsKarp"><a href="#EdmondsKarp" class="headerlink" title="EdmondsKarp"></a>EdmondsKarp</h3><p>不断bfs，每一次遍历O(n²)，最多遍历m次，O(m*n²)的复杂度<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">int bfs() &#123;</div><div class="line">	memset(pre,-1,sizeof(pre));</div><div class="line">	for(int i=1;i&lt;=n;++i)</div><div class="line">		flow[i]=INF;</div><div class="line">	queue&lt;int&gt;q;</div><div class="line">	pre[S]=0,q.push(S);</div><div class="line">	while(!q.empty())&#123;</div><div class="line">		int op(q.front());</div><div class="line">		q.pop();</div><div class="line">		for(int i=1;i&lt;=n;++i)&#123;</div><div class="line">			if(i==S||pre[i]!=-1||c[op][i]==0)</div><div class="line">				continue;</div><div class="line">			pre[i]=op; //找到未遍历过的点</div><div class="line">			flow[i]=min(flow[op],c[op][i]); // 更行路径上的最小值 </div><div class="line">			q.push(i);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	if(flow[T]==INF)</div><div class="line">		return -1;</div><div class="line">	return flow[T];</div><div class="line">&#125;</div><div class="line">int solve() &#123;</div><div class="line">	int ans(0);</div><div class="line">	while(1)&#123;</div><div class="line">		int k(bfs());</div><div class="line">		if(k==-1)</div><div class="line">			break;</div><div class="line">		ans+=k;</div><div class="line">		int nw(T);</div><div class="line">		while(nw!=S)&#123;//更新残余网络 </div><div class="line">			c[pre[nw]][nw]-=k,c[nw][pre[nw]]+=k;</div><div class="line">			nw=pre[nw];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return ans;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="Dinic"><a href="#Dinic" class="headerlink" title="Dinic"></a>Dinic</h3><ol>
+<li>bfs建立层次图  </li>
+<li>在层次图中dfs直到找不到增广路  </li>
+<li>重复以上过程直到找不到增广路<br>每次重新分层，汇点所在层次严格递增。n个点的层次图最多n层，所以最多重新分层n次。<br>在同一个层次图中，每条增广路都有一个瓶颈，即最小值的限制所在边，而两次增广的瓶颈不可能相同，所以增广路最多m条。<br>搜索每一条增广路时，前进和回溯都最多n次（最多n个点），所以一次dfs是O(nm)的复杂度。<br>综上，是O(m*n²)的复杂度。<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">bool bfs()&#123;//bfs建立层次图</div><div class="line">	memset(dep,0,sizeof(dep));</div><div class="line">	hd=tl=0;</div><div class="line">	q[++tl]=s;</div><div class="line">	dep[s]=1;</div><div class="line">	while(hd&lt;tl)&#123;</div><div class="line">		int op(q[++hd]);</div><div class="line">		for(int i=headlist[op];i!=-1;i=edge[i].next)&#123;</div><div class="line">			if(edge[i].val&amp;&amp;(!dep[edge[i].v]))&#123;</div><div class="line">				dep[edge[i].v]=dep[op]+1;</div><div class="line">				q[++tl]=edge[i].v;</div><div class="line">				if(edge[i].v==t)//遍历到t就返回，此时该层次图已建好</div><div class="line">					return true;//再访问其它的点没有必要</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return false;</div><div class="line">&#125;</div><div class="line">int dfs(int op,int fw)&#123;</div><div class="line">	if(op==t)</div><div class="line">		return fw;</div><div class="line">	int tmp(fw),k;</div><div class="line">	for(int i=headlist[op];i!=-1;i=edge[i].next)&#123;</div><div class="line">		if(edge[i].val&amp;&amp;tmp&amp;&amp;dep[edge[i].v]==dep[op]+1)&#123;</div><div class="line">			k=dfs(edge[i].v,min(edge[i].val,tmp));</div><div class="line">			if(!k)&#123;//该点后面没有路径，所以要从层次图中删去</div><div class="line">				dep[edge[i].v]=0;//因为和当前点op层次相同的点</div><div class="line">				continue;//还可能会访问到它</div><div class="line">			&#125;</div><div class="line">			edge[i].val-=k;</div><div class="line">			edge[i^1].val+=k;</div><div class="line">			tmp=k;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return fw-tmp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="最大流"><a href="#最大流" class="headerlink" title="最大流"></a>最大流</h2><blockquote>
+<p>网络流中大部分可以分为两种类型的点：与S相连的点和与T相连的点。所以建模的时候也可以向这方面考虑，将点分成两个集合。 </p>
+</blockquote>
+<h3 id="搭配飞行员"><a href="#搭配飞行员" class="headerlink" title="搭配飞行员"></a>搭配飞行员</h3><p><a href="http://cogs.pro/cogs/problem/problem.php?pid=14" target="_blank" rel="external">传送门</a><br>题目大意：<br>有n(n ≤ 100)个驾驶员（其中包括a个正驾驶员和b个副驾驶员）驾驶一种飞机，每架需要一个正驾驶员和一个副驾驶员。有些驾驶员不能在同一架飞机上，问如何搭配驾驶员才能使出航的飞机最多。<br>题解：<br>题意很明了，将正驾驶员与S相连，容量为1，将副驾驶员与T相连，边容量为1，将可以在一辆飞机上的正驾驶员和副驾驶员相连，边容量&gt;0即可。与S，T相连的边限制了驾驶员的搭配次数，中间的边就无需再限制<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;queue&gt;</div><div class="line">using namespace std;</div><div class="line">int n,n1,n2;</div><div class="line">struct edge&#123;</div><div class="line">	int s,e,n,w;</div><div class="line">&#125;a[2001];</div><div class="line">int pre[101],tot;</div><div class="line">inline void insert(int s,int e,int w)&#123;</div><div class="line">	a[tot].s=s;</div><div class="line">	a[tot].e=e;</div><div class="line">	a[tot].w=w;</div><div class="line">	a[tot].n=pre[s];</div><div class="line">	pre[s]=tot++;</div><div class="line">&#125;</div><div class="line">int x,y;</div><div class="line">int sup;</div><div class="line">int inf(0x7fffffff);</div><div class="line">int adj[101];</div><div class="line">int dis[101];</div><div class="line">inline bool bfs(int s,int t)&#123;</div><div class="line">	memset(dis,0,sizeof(dis));</div><div class="line">	queue&lt;int&gt;q;</div><div class="line">	q.push(s);</div><div class="line">	dis[s]=1;</div><div class="line">	while(!q.empty())&#123;</div><div class="line">		int k(q.front());</div><div class="line">		q.pop();</div><div class="line">	 	for(int i=pre[k];i!=-1;i=a[i].n)&#123;</div><div class="line">			if(!a[i].w||dis[a[i].e])</div><div class="line">				continue;</div><div class="line">			dis[a[i].e]=dis[k]+1;</div><div class="line">			if(a[i].e==t)</div><div class="line">				return true;</div><div class="line">			q.push(a[i].e);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return false;</div><div class="line">&#125;</div><div class="line">inline int my_min(int a,int b)&#123;</div><div class="line">	return a&lt;b?a:b;</div><div class="line">&#125;</div><div class="line">inline int dfs(int now,int flow)&#123;</div><div class="line">	if(now==sup)</div><div class="line">		return flow;</div><div class="line">	int tmp(flow),f;</div><div class="line">	for(int i=pre[now];i!=-1;i=a[i].n)&#123;</div><div class="line">		if(!a[i].w||!tmp||dis[a[i].e]!=dis[now]+1)</div><div class="line">			continue;</div><div class="line">		f=dfs(a[i].e,my_min(a[i].w,tmp));</div><div class="line">		if(!f)&#123;</div><div class="line">			dis[a[i].e]=0;</div><div class="line">			continue;</div><div class="line">		&#125;</div><div class="line">		a[i].w-=f;</div><div class="line">		a[i^1].w+=f;</div><div class="line">		tmp-=f;</div><div class="line">	&#125;</div><div class="line">	return flow-tmp;</div><div class="line">&#125;</div><div class="line">inline void dinic(int s,int t)&#123;</div><div class="line">	int ans(0);</div><div class="line">	//bfs(s,t);cout&lt;&lt;"j";</div><div class="line">	while(bfs(s,t))</div><div class="line">		ans+=dfs(s,inf);</div><div class="line">	printf("%d",ans);</div><div class="line">&#125;</div><div class="line">inline int gg()&#123;</div><div class="line">	freopen("flyer.in","r",stdin);</div><div class="line">	freopen("flyer.out","w",stdout);</div><div class="line">	memset(pre,-1,sizeof(pre));</div><div class="line">	scanf("%d%d",&amp;n,&amp;n1);</div><div class="line">	sup=n+1;</div><div class="line">	n2=n-n1;</div><div class="line">	while(scanf("%d%d",&amp;x,&amp;y)==2)</div><div class="line">		insert(x,y,1),insert(y,x,0);</div><div class="line">	for(int i=1;i&lt;=n1;i++)</div><div class="line">		insert(0,i,1),insert(i,0,0);</div><div class="line">	for(int i=n1+1,j=1;j&lt;=n2;j++,i++)</div><div class="line">		insert(i,sup,1),insert(sup,i,0);</div><div class="line">	dinic(0,sup);</div><div class="line">&#125;</div><div class="line">int K(gg());</div><div class="line">int main()&#123;;&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="士兵占领"><a href="#士兵占领" class="headerlink" title="士兵占领"></a>士兵占领</h3><p><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1458" target="_blank" rel="external">传送门</a><br>题面：<br>有一个n*m的棋盘，有的格子是障碍。现在你要选择一些格子来放置一些士兵，一个格子里最多可以放置一个士兵，障碍格里不能放置士兵。要求第i行至少放置了ri个士兵，第j列至少放置了cj个士兵。求士兵最少是多少。<br>假设我们不考虑一个位置对它所在行，列两者的贡献。那么答案就是sum=∑(i 1~n)ri+∑(j 1~m)cj。但实际上，有的点对两者都有贡献，结果为sum减去的点的数量，士兵数量最少即这样的点数量最多。<br>之后，建图和上一道题类似。将每行作为一个点与S相连，容量为ri，每列作为一个点与T相连，容量为cj。可以放士兵的点行与列相连，容量为1.跑最大流就可以求出上述点的最大值。<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;queue&gt;</div><div class="line">using namespace std;</div><div class="line">inline int read()&#123;</div><div class="line">    int sum(0);</div><div class="line">    char ch(getchar());</div><div class="line">    for(;ch&lt;'0'||ch&gt;'9';ch=getchar());</div><div class="line">    for(;ch&gt;='0'&amp;&amp;ch&lt;='9';sum=sum*10+ch-'0',ch=getchar());</div><div class="line">    return sum;</div><div class="line">&#125;</div><div class="line">struct edge&#123;</div><div class="line">    int s,e,w,n;</div><div class="line">&#125;a[50001];</div><div class="line">int pre[250],tot;</div><div class="line">inline void insert(int s,int e,int w)&#123;</div><div class="line">    a[tot].s=s;</div><div class="line">    a[tot].e=e;</div><div class="line">    a[tot].w=w;</div><div class="line">    a[tot].n=pre[s];</div><div class="line">    pre[s]=tot++;</div><div class="line">&#125;</div><div class="line">int n,m,k;</div><div class="line">int sup;</div><div class="line">int l[101],c[101];</div><div class="line">bool g[101][101];</div><div class="line">int sum(0);</div><div class="line">int dis[301];</div><div class="line">inline bool bfs(int s,int t)&#123;</div><div class="line">	memset(dis,0,sizeof(dis));</div><div class="line">	queue&lt;int&gt;q;</div><div class="line">	q.push(s);</div><div class="line">	dis[s]=1;</div><div class="line">	while(!q.empty())&#123;</div><div class="line">		int k(q.front());</div><div class="line">		q.pop();</div><div class="line">	 	for(int i=pre[k];i!=-1;i=a[i].n)&#123;</div><div class="line">			if(!a[i].w||dis[a[i].e])</div><div class="line">				continue;</div><div class="line">			dis[a[i].e]=dis[k]+1;</div><div class="line">			if(a[i].e==t)</div><div class="line">				return true;</div><div class="line">			q.push(a[i].e);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return false;</div><div class="line">&#125;</div><div class="line">inline int my_min(int a,int b)&#123;</div><div class="line">    return a&lt;b?a:b;</div><div class="line">&#125;</div><div class="line">inline int dfs(int now,int flow)&#123;</div><div class="line">	if(now==sup)</div><div class="line">		return flow;</div><div class="line">	int tmp(flow),f;</div><div class="line">	for(int i=pre[now];i!=-1;i=a[i].n)&#123;</div><div class="line">		if(!a[i].w||!tmp||dis[a[i].e]!=dis[now]+1)</div><div class="line">			continue;</div><div class="line">		f=dfs(a[i].e,my_min(a[i].w,tmp));</div><div class="line">		if(!f)&#123;</div><div class="line">			dis[a[i].e]=0;</div><div class="line">			continue;</div><div class="line">		&#125;</div><div class="line">		a[i].w-=f;</div><div class="line">		a[i^1].w+=f;</div><div class="line">		tmp-=f;</div><div class="line">	&#125;</div><div class="line">	return flow-tmp;</div><div class="line">&#125;</div><div class="line">inline bool judge()&#123;</div><div class="line">    int tmp;</div><div class="line">    for(int i=1;i&lt;=m;i++)&#123;</div><div class="line">        tmp=0;</div><div class="line">        for(int j=1;j&lt;=n;j++)</div><div class="line">            if(g[i][j])</div><div class="line">                tmp++;</div><div class="line">        if(tmp&lt;l[i])</div><div class="line">            return true;</div><div class="line">    &#125;</div><div class="line">    for(int j=1;j&lt;=n;j++)&#123;</div><div class="line">        tmp=0;</div><div class="line">        for(int i=1;i&lt;=m;i++)</div><div class="line">            if(g[i][j])</div><div class="line">                tmp++;</div><div class="line">        if(tmp&lt;c[j])</div><div class="line">            return true;</div><div class="line">    &#125;</div><div class="line">    return false;</div><div class="line">&#125;</div><div class="line">int ans(0),inf(0x7fffffff);</div><div class="line">int main()&#123;</div><div class="line">    memset(pre,-1,sizeof(pre));</div><div class="line">    memset(g,true,sizeof(g));</div><div class="line">    m=read(),n=read(),k=read();</div><div class="line">    sup=n+m+1;</div><div class="line">    for(int i=1;i&lt;=m;i++)</div><div class="line">        l[i]=read(),sum+=l[i];</div><div class="line">    for(int i=1;i&lt;=n;i++)</div><div class="line">        c[i]=read(),sum+=c[i];</div><div class="line">    for(int i=1;i&lt;=k;i++)&#123;</div><div class="line">        int x(read()),y(read());</div><div class="line">        g[x][y]=0;</div><div class="line">    &#125;</div><div class="line">    if(judge())&#123;</div><div class="line">        puts("JIONG!");</div><div class="line">        return 0;</div><div class="line">    &#125;</div><div class="line">    for(int i=1;i&lt;=m;i++)</div><div class="line">        for(int j=1;j&lt;=n;j++)</div><div class="line">            if(g[i][j])</div><div class="line">                insert(i,j+m,1),insert(j+m,i,0);</div><div class="line">    for(int i=1;i&lt;=m;i++)</div><div class="line">        insert(0,i,l[i]),insert(i,0,0);</div><div class="line">    for(int i=1;i&lt;=n;i++)</div><div class="line">        insert(i+m,sup,c[i]),insert(sup,i+m,0);</div><div class="line">    while(bfs(0,sup))</div><div class="line">        ans+=dfs(0,inf);</div><div class="line">    printf("%d",sum-ans);</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="分子切割"><a href="#分子切割" class="headerlink" title="分子切割"></a>分子切割</h3><p>题目描述：<br>有一个由n*m个单位放个组成的矩形区域。有两种原子，用A和B表示。有的单位方格中没有原子，有的单位方格中只有一个原子。若两个单位方格有公共边，那么他们是相邻的。如果一个A原子与两个B原子相邻，并且这两个B原子与A原子形成直角，A原子在直角的定点处，那么就可以把这三个原子整体切割下来，得到一个“L”形分子。<br>求最多切割出多少个“L”形分子。（n，m ≤ 500）<br>题解：<br>要黑白染色<br>我们可以想到肯定是由S-B-A-B-T这样一条路径代表一个“L”形分子。之后便是建模限制每个点的使用次数以及B-A-B是直角。由此可以看出如果所有的B是一类点肯定是行不通的。但我们注意到一个“L”形分子的两个B原子必在相邻的两列（行）上，就可以按列（行）染色了。<br>S向奇数列的B点建边容量为1，奇数列的B点只能流向周围的A点。<br>偶数列的B点向T建边容量为1，且只能由周围的A点流向偶数列的B点<br>这样就可以保证流过的B-A-B一定是直角。<br>但这样并不能保证A的使用次数，如上图所示，A会重复使用。为了限制A的使用次数，我们可以拆点，将A拆成两个点A1和A2，同时在A1A2间连一条容量为1的边，流入A的连A1，流出A的连A2。</p>
+<h3 id="紧急疏散"><a href="#紧急疏散" class="headerlink" title="紧急疏散"></a>紧急疏散</h3><p><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1189" target="_blank" rel="external">传送门</a><br>题解：<br>显然肯定有一个时间，在此之前不能完全逃离，在此之后可以完全逃离。这样我们就可以二分了。<br>每个位置上人数不限，所以除去到门上时，每个人可以单独考虑。<br>对一扇门来说，每个人到门前的时间可能不同，即每个人可以利用门逃离的时间段不同，我们要限制每个人可使用的时间，可以每扇门每个时间单独一个点。  </p>
+<p>具体建模：<br>S向每个人连边，容量为1。每个人向每扇门可以使用的时间的一系列点连边，容量为1，每扇门的每个时间点向T连边，容量为1。<br>每个人每扇门可以使用的时间即这个人到这扇门最短时间及以后，所以要先跑一遍最短路。<br>这样，当最大流等于人的数量时，就可以完全逃离。</p>
+<h3 id="Collector’s-Problem"><a href="#Collector’s-Problem" class="headerlink" title="Collector’s Problem"></a>Collector’s Problem</h3><p>题目描述：<br>Bob和他的朋友从糖果包装里收集贴纸。Bob和他的朋友总共n人。共有m种不同的贴纸。<br>每人手里都有一些（可能有重复的）贴纸，并且只跟别人交换他所没有的贴纸。贴纸总是一对一交换。<br>Bob比这些朋友更聪明，因为他意识到只跟别人交换自己没有的贴纸并不总是最优的。在某些情况下，换来一张重复的贴纸更划算。<br>假设Bob的朋友只跟Bob交换（他们之间不交换），并且这些朋友只会出让手里的重复贴纸来交换他们没有的不同贴纸。你的任务是帮助Bob算出他最终可以得到的不同贴纸的最大数量。<br>2≤n≤10,5≤m≤25<br>题解：<br>对于Bob的每个朋友，Bob最多只能与他交换x次（这个朋友没有的贴纸的种数与他拥有的重复贴纸数量的较小值）。Bob朋友的作用就是将Bob手中的一种贴纸X换成另一种贴纸Y。<br>所以将每种贴纸作为一个结点，由S向其连边，容量为Bob拥有的没中贴纸的数量，并且向T连边，容量为1。<br>对于每个朋友，其没有的贴纸的点向其连边，容量为1（最多换一次）。并且他向拥有的重复贴纸的点连边，容量为num-1。<br> 这样从一种贴纸的结点流经一个朋友再流向另一种贴纸，就等于完成了一次交换，而由于又流回了贴纸结点仍然可以用该贴只去做交换。<br> 这样最大流便是能够拥有的贴纸的最大种数。</p>
+<h2 id="最小割"><a href="#最小割" class="headerlink" title="最小割"></a>最小割</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><blockquote>
+<p>把所有的结点分为两个集合S和T，其中s在S中，t在T中。把所有起点在S中，终点在T中的边删除，就无法从s到达t了，这样的一个划分称为s-t割，它的容量为删除的所有边的容量的总值，最小割即为所有s-t割中的最小值。</p>
+<h3 id="求解最小割基于一个事实：最小割等于最大流"><a href="#求解最小割基于一个事实：最小割等于最大流" class="headerlink" title="求解最小割基于一个事实：最小割等于最大流"></a>求解最小割基于一个事实：最小割等于最大流</h3><p>证明：<br>对于一个割来说，所有从s到t的流量必定经过删除的边，那么最大流一定&lt;=割的值，同理可以推出最大流&lt;=任意割的值。<br>下面来看一个已经跑完最大流的残余网络，此时图中已没有从s到t的路径。<br>将s和s能到达的所有点划分为S集，剩余点为T集。中间的所有边为一个割，<br>且均满载（剩余容量为0），那么当前流也就是最大流等于割的值，又因割<br>的值大于等于最大流，所以此时的割即为最小割，且与最大流相等。</p>
+</blockquote>
+<h3 id="王者之剑"><a href="#王者之剑" class="headerlink" title="王者之剑"></a>王者之剑</h3><p><a href="http://cogs.pro/cogs/problem/problem.php?pid=2051" target="_blank" rel="external">传送门</a><br>取值时一定在偶数时刻，取走一个格子的值后，就不能取走与其相邻格子的值，也就是相邻格子之间是不相容的。<br>证明：<br>假设取值时在奇数时刻，那么取值前的上一个时刻，必定在这个格子的相邻格子中，而那时又是偶数时刻，所以这个格子的值会消失，无法取到。   </p>
+<p>题解：<br>这道题可以从怎样走的思维模式中跳出来，转化到怎样去取上。因为只要取的格子相容，是一定有合法路径的。<br>有不容的点就可以转化到最小割上，用总值减去割掉最小的值，就是最优解。  </p>
+<p>具体建模：<br>此时是若两者都取不相容，所以需要翻转源汇。将矩阵按黑白棋盘染色，S与白点相连，容量为权值，黑点与T相连，容量为权值。不相容的点之间连边，容量为INF。S对于白点来说为取，T对于黑点来说为取。从一条路径来看，S-白-黑-T，因为中间的边为极大值，所以只能割两边的边，割掉的边即为不取的值。求出最小割即为能使剩余点相容的减去的最小总值。<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;queue&gt;</div><div class="line">using namespace std;</div><div class="line">inline int read()&#123;</div><div class="line">	int sum(0);</div><div class="line">	char ch(getchar());</div><div class="line">	for(;ch&lt;'0'||ch&gt;'9';ch=getchar());</div><div class="line">	for(;ch&gt;='0'&amp;&amp;ch&lt;='9';sum=sum*10+(ch^48),ch=getchar());</div><div class="line">	return sum;</div><div class="line">&#125;</div><div class="line">struct edge&#123;</div><div class="line">	int e,n,w;</div><div class="line">&#125;a[2000001];</div><div class="line">int pre[100001],tot;</div><div class="line">inline void insert(int s,int e,int w)&#123;</div><div class="line">	a[tot].e=e;</div><div class="line">	a[tot].w=w;</div><div class="line">	a[tot].n=pre[s];</div><div class="line">	pre[s]=tot++;</div><div class="line">&#125;</div><div class="line">int n,m;</div><div class="line">int w[105][105],col[105][105];</div><div class="line">inline void paint()&#123;</div><div class="line">	int now(1);</div><div class="line">	for(int i=1;i&lt;=n;i++)&#123;</div><div class="line">		now^=1;</div><div class="line">		for(int j=1;j&lt;=m;j++)&#123;</div><div class="line">			if(j&amp;1)</div><div class="line">				col[i][j]=now;</div><div class="line">			else</div><div class="line">				col[i][j]=now^1;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">int S(0),T;</div><div class="line">int ans(0),inf(0x7fffffff),sum(0);</div><div class="line">inline void build()&#123;</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		for(int j=1;j&lt;=m;j++)&#123;</div><div class="line">			if(col[i][j])</div><div class="line">				insert(S,(i-1)*m+j,w[i][j]),insert((i-1)*m+j,S,0);</div><div class="line">			else</div><div class="line">				insert((i-1)*m+j,T,w[i][j]),insert(T,(i-1)*m+j,0);</div><div class="line">		&#125;</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		for(int j=1;j&lt;=m;j++)&#123;</div><div class="line">			if(col[i][j])&#123;</div><div class="line">				if(i!=1)</div><div class="line">					insert((i-2)*m+j,(i-1)*m+j,0),insert((i-1)*m+j,(i-2)*m+j,inf);</div><div class="line">				if(i!=n)</div><div class="line">					insert(i*m+j,(i-1)*m+j,0),insert((i-1)*m+j,i*m+j,inf);</div><div class="line">				if(j!=1)</div><div class="line">					insert((i-1)*m+j-1,(i-1)*m+j,0),insert((i-1)*m+j,(i-1)*m+j-1,inf);</div><div class="line">				if(j!=m)</div><div class="line">					insert((i-1)*m+j+1,(i-1)*m+j,0),insert((i-1)*m+j,(i-1)*m+j+1,inf);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">&#125;</div><div class="line">int dis[10010];</div><div class="line">inline bool bfs(int s,int t)&#123;</div><div class="line">	memset(dis,0,sizeof(dis));</div><div class="line">	dis[s]=1;</div><div class="line">	queue&lt;int&gt;q;</div><div class="line">	q.push(s);</div><div class="line">	while(!q.empty())&#123;</div><div class="line">		int k(q.front());</div><div class="line">		q.pop();</div><div class="line">		for(int i=pre[k];i!=-1;i=a[i].n)&#123;</div><div class="line">			int e(a[i].e);</div><div class="line">			if(!dis[e]&amp;&amp;a[i].w)&#123;</div><div class="line">				dis[e]=dis[k]+1;</div><div class="line">				q.push(e);</div><div class="line">				if(e==t)</div><div class="line">					return true;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return false;</div><div class="line">&#125;</div><div class="line">inline int my_min(int a,int b)&#123;</div><div class="line">	return a&lt;b?a:b;</div><div class="line">&#125;</div><div class="line">inline int dfs(int now,int flow)&#123;</div><div class="line">	if(now==T)</div><div class="line">		return flow;</div><div class="line">	int tmp(flow),f;</div><div class="line">	for(int i=pre[now];i!=-1;i=a[i].n)&#123;</div><div class="line">		int e(a[i].e);</div><div class="line">		if(dis[e]==dis[now]+1&amp;&amp;tmp&amp;&amp;a[i].w)&#123;</div><div class="line">			f=dfs(e,my_min(tmp,a[i].w));</div><div class="line">			if(!f)&#123;</div><div class="line">				dis[e]=0;</div><div class="line">				continue;</div><div class="line">			&#125;</div><div class="line">			a[i].w-=f;</div><div class="line">			a[i^1].w+=f;</div><div class="line">			tmp-=f;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return flow-tmp;</div><div class="line">&#125; </div><div class="line">inline int gg()&#123;</div><div class="line">	freopen("Excalibur.in","r",stdin);</div><div class="line">	freopen("Excalibur.out","w",stdout);</div><div class="line">	memset(pre,-1,sizeof(pre));</div><div class="line">	n=read(),m=read();</div><div class="line">	T=n*m+1;</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		for(int j=1;j&lt;=m;j++)</div><div class="line">			w[i][j]=read(),sum+=w[i][j];</div><div class="line">	paint();</div><div class="line">	build();</div><div class="line">	while(bfs(S,T))</div><div class="line">		ans+=dfs(S,inf);</div><div class="line">	printf("%d",sum-ans);</div><div class="line">	return 0;</div><div class="line">&#125;</div><div class="line">int K(gg());</div><div class="line">int main()&#123;;&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="happiness"><a href="#happiness" class="headerlink" title="happiness"></a>happiness</h3><p><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=2127" target="_blank" rel="external">传送门</a><br>题解：<br>此题与上一题相似，不过这次是选择不同时不能得到额外的权值，无需翻转源汇，S对所有点来说都是文科，T对所有点来说都是理科。<br>对于单独两个点来说，只有两种情况。<br>若两个人都选文科，需要割掉第2，4条边，代价为两个人选理科分别的贡献，以及他们一起选理科的贡献，因为所有的点都是等价的，2，4边的权值除各自选理科贡献外再加上一半的额外贡献。<br>若两个人都选择理科同理。   </p>
+<p>若两个人选择不同，假设x选择文科，y选择理科，那么需要割掉2，3，5。<br>此时2，3权值和为分别选择科目的贡献和一半的同时选择理科和同时选择文科的贡献。还需再减去剩余的一半，即应是5的权值。(x，y间要建双向边。)<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;queue&gt;</div><div class="line">using namespace std;</div><div class="line">inline int read()&#123;</div><div class="line">	int sum(0);</div><div class="line">	char ch(getchar());</div><div class="line">	for(;ch&lt;'0'||ch&gt;'9';ch=getchar());</div><div class="line">	for(;ch&gt;='0'&amp;&amp;ch&lt;='9';sum=sum*10+(ch^48),ch=getchar());</div><div class="line">	return sum;</div><div class="line">&#125;</div><div class="line">struct edge&#123;</div><div class="line">	int e,n,w;</div><div class="line">&#125;a[200001];</div><div class="line">int pre[10010],tot;</div><div class="line">inline void insert(int s,int e,int w)&#123;</div><div class="line">	a[tot].e=e;</div><div class="line">	a[tot].w=w;</div><div class="line">	a[tot].n=pre[s];</div><div class="line">	pre[s]=tot++;</div><div class="line">&#125;</div><div class="line">int n,m;</div><div class="line">int w[101][101],l[101][101];</div><div class="line">int jz1[101][101],jz2[101][101],jz3[101][101],jz4[101][101];</div><div class="line">int sum(0),ans(0),inf(0x7fffffff);</div><div class="line">int S(0),T;</div><div class="line">int id[101][101];</div><div class="line">inline void init()&#123;</div><div class="line">	freopen("nt2011_happiness.in","r",stdin);</div><div class="line">	freopen("nt2011_happiness.out","w",stdout);</div><div class="line">	memset(pre,-1,sizeof(pre));</div><div class="line">	n=read(),m=read();</div><div class="line">	T=n*m+1;</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		for(int j=1;j&lt;=m;j++)</div><div class="line">			w[i][j]=read()&lt;&lt;1,sum+=w[i][j]&gt;&gt;1,id[i][j]=(i-1)*m+j;</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		for(int j=1;j&lt;=m;j++)</div><div class="line">			l[i][j]=read()&lt;&lt;1,sum+=l[i][j]&gt;&gt;1;</div><div class="line">	for(int i=1;i&lt;n;i++)</div><div class="line">		for(int j=1;j&lt;=m;j++)</div><div class="line">			jz1[i][j]=read(),sum+=jz1[i][j];</div><div class="line">	for(int i=1;i&lt;n;i++)</div><div class="line">		for(int j=1;j&lt;=m;j++)</div><div class="line">			jz2[i][j]=read(),sum+=jz2[i][j];</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		for(int j=1;j&lt;m;j++)</div><div class="line">			jz3[i][j]=read(),sum+=jz3[i][j];</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		for(int j=1;j&lt;m;j++)</div><div class="line">			jz4[i][j]=read(),sum+=jz4[i][j];</div><div class="line">&#125;</div><div class="line">inline void build()&#123;</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		for(int j=1;j&lt;=m;j++)&#123;</div><div class="line">			insert(S,id[i][j],w[i][j]+jz1[i][j]+jz1[i-1][j]+jz3[i][j]+jz3[i][j-1]),insert(id[i][j],S,0);</div><div class="line">			insert(id[i][j],T,l[i][j]+jz2[i][j]+jz2[i-1][j]+jz4[i][j]+jz4[i][j-1]),insert(T,id[i][j],0);</div><div class="line">		&#125;</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		for(int j=1;j&lt;=m;j++)&#123;</div><div class="line">			if(i!=n)</div><div class="line">				insert(id[i][j],id[i][j]+m,jz1[i][j]+jz2[i][j]),insert(id[i][j]+m,id[i][j],jz1[i][j]+jz2[i][j]);</div><div class="line">			if(j!=m)</div><div class="line">				insert(id[i][j],id[i][j]+1,jz3[i][j]+jz4[i][j]),insert(id[i][j]+1,id[i][j],jz3[i][j]+jz4[i][j]);</div><div class="line">		&#125;</div><div class="line">&#125;</div><div class="line">int dis[10020];</div><div class="line">inline bool bfs(int s,int t)&#123;</div><div class="line">	memset(dis,0,sizeof(dis));</div><div class="line">	dis[s]=1;</div><div class="line">	queue&lt;int&gt;q;</div><div class="line">	q.push(s);</div><div class="line">	while(!q.empty())&#123;</div><div class="line">		int k(q.front());</div><div class="line">		q.pop();</div><div class="line">		for(int i=pre[k];i!=-1;i=a[i].n)&#123;</div><div class="line">			int e(a[i].e);</div><div class="line">			if(!dis[e]&amp;&amp;a[i].w)&#123;</div><div class="line">				dis[e]=dis[k]+1;</div><div class="line">				q.push(e);</div><div class="line">				if(e==t)</div><div class="line">					return true;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return false;</div><div class="line">&#125;</div><div class="line">inline int my_min(int a,int b)&#123;</div><div class="line">	return a&lt;b?a:b;</div><div class="line">&#125;</div><div class="line">inline int dfs(int now,int flow)&#123;</div><div class="line">	if(now==T)</div><div class="line">		return flow;</div><div class="line">	int tmp(flow),f;</div><div class="line">	for(int i=pre[now];i!=-1;i=a[i].n)&#123;</div><div class="line">		int e(a[i].e);</div><div class="line">		if(dis[e]==dis[now]+1&amp;&amp;tmp&amp;&amp;a[i].w)&#123;</div><div class="line">			f=dfs(e,my_min(tmp,a[i].w));</div><div class="line">			if(!f)&#123;</div><div class="line">				dis[e]=0;</div><div class="line">				continue;</div><div class="line">			&#125;</div><div class="line">			a[i].w-=f;</div><div class="line">			a[i^1].w+=f;</div><div class="line">			tmp-=f;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return flow-tmp;</div><div class="line">&#125;</div><div class="line">inline void dinic()&#123;</div><div class="line">	while(bfs(S,T))</div><div class="line">		ans+=dfs(S,inf);</div><div class="line">	printf("%d",sum-(ans&gt;&gt;1));</div><div class="line">&#125;</div><div class="line">inline int gg()&#123;</div><div class="line">	init();</div><div class="line">	build();</div><div class="line">	dinic();</div><div class="line">	return 0;</div><div class="line">&#125;</div><div class="line">int K(gg());</div><div class="line">int main()&#123;;&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="人员雇佣"><a href="#人员雇佣" class="headerlink" title="人员雇佣"></a>人员雇佣</h3><p><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=2039" target="_blank" rel="external">传送门</a><br>题解：<br>这道题与上一道考虑角度相同，首先从两个人的角度考虑<br>若两个人都被雇佣，割掉的边为2，4，权值分别为雇佣二人的代价。<br>若两个人都不被雇佣，需要割掉1，3，权值均为两人共同的收益。因为共同收益，两人是两份。<br>若两人选择不同，假设x被雇佣，y不被雇佣，需要割掉2，3，5。而此时还应减去一份存在于1中的共同受益，再减去两人选择不同的减损。也就是要减去两份共同收益，即为5的权值。</p>
+<h3 id="切糕"><a href="#切糕" class="headerlink" title="切糕"></a>切糕</h3><p><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3144" target="_blank" rel="external">传送门</a><br>题解：<br>由题意得知，显然为最小割模型，将点权转化为边权。由S向(x,y,1)连边，边权为v(x, y,1)。由(x, y, z)向(x, y, z+1)连边，边权为v(x, y, z+1)。<br>最后由(x, y, R)向T连边，边权为INF。此题关键为这个选择的距离限制。<br>我们可以这样解决：由每个点向它相邻的点的下方的第d个点连边。也就由(x, y, z)向(x, y, z-d)连边，边权为INF。<br>首先，假设每条纵轴只割一条边。若两条边的距离大于d，一定会有图中所示路径，此时仍需要再割一条边。<br>假设再割一条右侧的边，此边与左边割掉的那条边的距离要 ≤ d，否则还会出现这样的路径。<br>只有距离 ≤ d，才能截断。<br>但此时，右边第一次截断的边已经没有必要了。因为只要上面两条边就可以截断了。<br>因此，每个纵轴只截断一条边，且相邻截断的边距离一定 ≤ d。<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;queue&gt;</div><div class="line">using namespace std;</div><div class="line">inline int read()&#123;</div><div class="line">	int sum(0);</div><div class="line">	char ch(getchar());</div><div class="line">	for(;ch&lt;'0'||ch&gt;'9';ch=getchar());</div><div class="line">	for(;ch&gt;='0'&amp;&amp;ch&lt;='9';sum=sum*10+(ch^48),ch=getchar());</div><div class="line">	return sum;</div><div class="line">&#125;</div><div class="line">struct edge&#123;</div><div class="line">	int e,n,w;</div><div class="line">&#125;a[1000001];</div><div class="line">int pre[64500],tot;</div><div class="line">inline void insert(int s,int e,int w)&#123;</div><div class="line">	a[tot].e=e;</div><div class="line">	a[tot].w=w;</div><div class="line">	a[tot].n=pre[s];</div><div class="line">	pre[s]=tot++;</div><div class="line">&#125;</div><div class="line">int p,q,r,d;</div><div class="line">int id[41][41][41],w[41][41][41];</div><div class="line">int cnt(0);</div><div class="line">int S(0),T;</div><div class="line">int ans(0),inf(0x7fffffff);</div><div class="line">int dis[64500];</div><div class="line">inline bool bfs(int s,int t)&#123;</div><div class="line">	memset(dis,0,sizeof(dis));</div><div class="line">	dis[s]=1;</div><div class="line">	queue&lt;int&gt;q;</div><div class="line">	q.push(s);</div><div class="line">	while(!q.empty())&#123;</div><div class="line">		int k(q.front());</div><div class="line">		q.pop();</div><div class="line">		for(int i=pre[k];i!=-1;i=a[i].n)&#123;</div><div class="line">			int e(a[i].e);</div><div class="line">			if(!dis[e]&amp;&amp;a[i].w)&#123;</div><div class="line">				dis[e]=dis[k]+1;</div><div class="line">				q.push(e);</div><div class="line">				if(e==t)</div><div class="line">					return true;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return false;</div><div class="line">&#125;</div><div class="line">inline int my_min(int a,int b)&#123;</div><div class="line">	return a&lt;b?a:b;</div><div class="line">&#125;</div><div class="line">inline int dfs(int now,int flow)&#123;</div><div class="line">	if(now==T)</div><div class="line">		return flow;</div><div class="line">	int tmp(flow),f;</div><div class="line">	for(int i=pre[now];i!=-1;i=a[i].n)&#123;</div><div class="line">		int e(a[i].e);</div><div class="line">		if(dis[e]==dis[now]+1&amp;&amp;tmp&amp;&amp;a[i].w)&#123;</div><div class="line">			f=dfs(e,my_min(tmp,a[i].w));</div><div class="line">			if(!f)&#123;</div><div class="line">				dis[e]=0;</div><div class="line">				continue;</div><div class="line">			&#125;</div><div class="line">			a[i].w-=f;</div><div class="line">			a[i^1].w+=f;</div><div class="line">			tmp-=f;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return flow-tmp;</div><div class="line">&#125;</div><div class="line">inline int gg()&#123;</div><div class="line">	freopen("nutcake.in","r",stdin);</div><div class="line">	freopen("nutcake.out","w",stdout);</div><div class="line">	memset(pre,-1,sizeof(pre));</div><div class="line">	p=read(),q=read(),r=read(),d=read();</div><div class="line">	T=p*q*r+1;</div><div class="line">	for(int i=1;i&lt;=r;i++)</div><div class="line">		for(int j=1;j&lt;=p;j++)</div><div class="line">			for(int k=1;k&lt;=q;k++)&#123;</div><div class="line">				w[i][j][k]=read();</div><div class="line">				id[i][j][k]=++cnt;</div><div class="line">				insert(id[i-1][j][k],id[i][j][k],w[i][j][k]),insert(id[i][j][k],id[i-1][j][k],0);</div><div class="line">				if(i==r)</div><div class="line">					insert(id[i][j][k],T,inf),insert(T,id[i][j][k],0);</div><div class="line">				if(i&gt;d)&#123;</div><div class="line">					if(j!=1)</div><div class="line">						insert(id[i][j][k],id[i-d][j-1][k],inf),insert(id[i-d][j-1][k],id[i][j][k],0);</div><div class="line">					if(j!=p)</div><div class="line">						insert(id[i][j][k],id[i-d][j+1][k],inf),insert(id[i-d][j+1][k],id[i][j][k],0);</div><div class="line">					if(k!=1)</div><div class="line">						insert(id[i][j][k],id[i-d][j][k-1],inf),insert(id[i-d][j][k-1],id[i][j][k],0);</div><div class="line">					if(k!=q)</div><div class="line">						insert(id[i][j][k],id[i-d][j][k+1],inf),insert(id[i-d][j][k+1],id[i][j][k],0);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">	while(bfs(S,T))</div><div class="line">		ans+=dfs(S,inf);</div><div class="line">	printf("%d",ans);</div><div class="line">	return 0;</div><div class="line">&#125;</div><div class="line">int K(gg());</div><div class="line">int main()&#123;;&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="费用流"><a href="#费用流" class="headerlink" title="费用流"></a>费用流</h2><h3 id="最小费用最大流"><a href="#最小费用最大流" class="headerlink" title="最小费用最大流"></a>最小费用最大流</h3><p>在保证最大流的基础上，使总费用最小<br>这类问题中每条边除了容量还有花费，建边时圆边为原本花费，反向边为花费的负数。每条边的花费为使用流量乘以单位流量的花费,所有边的花费就是总花费。<br>通过前面的最大流定理，我们知道只要不断地寻找增广路，就可以找到最大流。那么为了最小费用，我们只需在找增广路时，贪心找到单位流量费用最小的那条增广路即可。<br>证明：  </p>
+<ul>
+<li>每次寻找的增广路的单位最小费用一定是不下降的。  </li>
+<li>寻找增广路的过程中不会出现负环。  </li>
+<li>局部最优一定是整体最优  <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">FIND</span><span class="params">(<span class="keyword">int</span> st,<span class="keyword">int</span> ed,<span class="keyword">int</span> &amp;fw,<span class="keyword">int</span> &amp;Cost)</span></span>&#123;</div><div class="line">	<span class="built_in">memset</span>(dis,<span class="number">0x3f</span>,<span class="keyword">sizeof</span>(dis));</div><div class="line">	<span class="built_in">memset</span>(ins,<span class="literal">false</span>,<span class="keyword">sizeof</span>(ins));</div><div class="line">	<span class="built_in">memset</span>(pr,<span class="number">0</span>,<span class="keyword">sizeof</span>(pr));</div><div class="line">	inf = dis[<span class="number">0</span>];</div><div class="line">	<span class="built_in">queue</span> &lt;<span class="keyword">int</span>&gt; q;</div><div class="line">	q.push(st), dis[st] = <span class="number">0</span>, a[st] = inf;</div><div class="line">	<span class="keyword">while</span>(!q.empty()) &#123;</div><div class="line">		<span class="keyword">int</span> op = q.front(); q.pop();</div><div class="line">		ins[q] = <span class="literal">false</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = headlist[q] ; i != <span class="number">-1</span> ; i = Edge[i].next) &#123;</div><div class="line">			<span class="keyword">if</span>(Edge[i].val&amp;&amp;dis[Edge[i].v]&gt;dis[op]+Edge[i].cost) &#123;</div><div class="line">				dis[sg[i].v] = dis[op]+Edge[i].cost;</div><div class="line">				pr[Edge[i].v] = i;</div><div class="line">				a[Edge[i].v] = MIN(a[op],Edge[i].val);</div><div class="line">				<span class="keyword">if</span>(!ins[Edge[i].v]) &#123;</div><div class="line">					ins[Edge[i].v] = <span class="literal">true</span>;</div><div class="line">					q.push(Edge[i].v);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(dis[ed]==inf) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">	fw += a[ed];</div><div class="line">	Cost += dis[ed]*a[ed];</div><div class="line">	<span class="keyword">int</span> w = ed;</div><div class="line">	<span class="keyword">while</span>(w!=st) &#123;</div><div class="line">		Edge[pr[w]].val -= a[ed];</div><div class="line">		Edge[pr[w]^<span class="number">1</span>].val += a[ed];</div><div class="line">		w = Edge[pr[w]].u;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="餐巾"><a href="#餐巾" class="headerlink" title="餐巾"></a>餐巾</h3><p><a href="http://cogs.pro/cogs/problem/problem.php?pid=461" target="_blank" rel="external">传送门</a><br>题解：<br>首先，每天的餐巾分为两种情况，新买的和原来的。<br>每天作为一个点，由S向其连边，容量为Ri，花费为0。<br>每天可以向T连边，容量为INF，花费为p，每天都可以购买餐巾无数次。<br>将每天用过的餐巾在新建一层点，由于分配去快洗和慢洗的餐巾总数有限制，并非分别有限制，所有这两种无需再分开，这层点分别向T建边，容量为Ri，花费为0，限制总容量。<br>使用快洗的餐巾，由i向(i+m+N)’建边，容量为INF，花费为f，慢洗同理，花费分别建边。<br>但第i-m天洗完后的餐巾也可以供第i天以后使用。所以再由i向i+1建边，容量为INF，花费为0。这样第i天就能使用到以前所有可以使用的洗完的餐巾了。<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;queue&gt;</div><div class="line">using namespace std;</div><div class="line">struct edge&#123;</div><div class="line">	int e,n,flow,cost;</div><div class="line">&#125;a[20010];</div><div class="line">int pre[410],tot;</div><div class="line">inline void insert(int s,int e,int flow,int cost)&#123;</div><div class="line">	a[tot].e=e;</div><div class="line">	a[tot].flow=flow;</div><div class="line">	a[tot].cost=cost;</div><div class="line">	a[tot].n=pre[s];</div><div class="line">	pre[s]=tot++;</div><div class="line">&#125;</div><div class="line">int S(0),T;</div><div class="line">int N,p,m,f,n,s;</div><div class="line">int r[201];</div><div class="line">int flow(0),ans(0),inf(0x7fffffff);</div><div class="line">inline void build()&#123;</div><div class="line">	for(int i=1;i&lt;=N;i++)&#123;</div><div class="line">		insert(S,i,r[i],0),insert(i,S,0,0);</div><div class="line">		insert(S,i+N,inf,p),insert(i+N,S,0,-p);</div><div class="line">		insert(i+N,T,r[i],0),insert(T,i+N,0,0);</div><div class="line">		if(i+m&lt;=N)</div><div class="line">			insert(i,i+m+N,inf,f),insert(i+m+N,i,0,-f);</div><div class="line">		if(i+n&lt;=N)</div><div class="line">			insert(i,i+n+N,inf,s),insert(i+n+N,i,0,-s);</div><div class="line">		if(i!=N)</div><div class="line">			insert(i,i+1,inf,0),insert(i+1,i,0,0);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">int dis[410],fa[410],path[410];</div><div class="line">inline bool bfs()&#123;</div><div class="line">	memset(dis,30,sizeof(dis));</div><div class="line">	memset(fa,-1,sizeof(fa));</div><div class="line">	queue&lt;int&gt;q;</div><div class="line">	q.push(S);</div><div class="line">	dis[S]=0;</div><div class="line">	while(!q.empty())&#123;</div><div class="line">		int k(q.front());</div><div class="line">		q.pop();</div><div class="line">		for(int i=pre[k];i!=-1;i=a[i].n)&#123;</div><div class="line">			int e(a[i].e);</div><div class="line">			if(a[i].flow&amp;&amp;dis[e]&gt;dis[k]+a[i].cost)&#123;</div><div class="line">				dis[e]=dis[k]+a[i].cost;</div><div class="line">				fa[e]=k;</div><div class="line">				path[e]=i;</div><div class="line">				q.push(e);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	if(fa[T]==-1)</div><div class="line">		return false;</div><div class="line">	return true;</div><div class="line">&#125;</div><div class="line">inline void dinic()&#123;</div><div class="line">	while(bfs())&#123;</div><div class="line">		int f(inf);</div><div class="line">		for(int i=T;i!=S;i=fa[i])</div><div class="line">			if(a[path[i]].flow&lt;f)</div><div class="line">				f=a[path[i]].flow;</div><div class="line">		flow+=f;</div><div class="line">		ans+=dis[T]*f;</div><div class="line">		for(int i=T;i!=S;i=fa[i])&#123;</div><div class="line">			a[path[i]].flow-=f;</div><div class="line">			a[path[i]^1].flow+=f;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">inline int gg()&#123;</div><div class="line">	freopen("napkin.in","r",stdin);</div><div class="line">	freopen("napkin.out","w",stdout);</div><div class="line">	memset(pre,-1,sizeof(pre));</div><div class="line">	scanf("%d",&amp;N);</div><div class="line">	T=(N&lt;&lt;1)+1;</div><div class="line">	for(int i=1;i&lt;=N;i++)</div><div class="line">		scanf("%d",&amp;r[i]);</div><div class="line">	scanf("%d%d%d%d%d",&amp;p,&amp;m,&amp;f,&amp;n,&amp;s);</div><div class="line">	build();</div><div class="line">	dinic();</div><div class="line">	printf("%d",ans);</div><div class="line">	return 0;</div><div class="line">&#125;</div><div class="line">int K(gg());</div><div class="line">int main()&#123;;&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="球队收益"><a href="#球队收益" class="headerlink" title="球队收益"></a>球队收益</h3><p><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1449" target="_blank" rel="external">传送门</a><br>题解：对于单独一支球队来说，假设其已经赢了n场，输了m场。当其再赢<br>    一场时，增加的收益为Ci<em>((n+1)^2-n^2)，即Ci</em>(2n+1)，输了同理。且每<br>    赢一场或输一场增加的收益都是递增的。所以我们可以直接统计每支球队接<br>    下来要比赛的局数，并分别为赢了或输了第几场比赛建边，因为收益递增，<br>    且求最小费用，所以，一定是按照赢或输的累积次数流的。<br>    对于一场比赛来说，只有两种结果，所以要对其建一条容量为一的入边，并建两条容量为1的出边，分别指向两种结果。<br>    但这样，对于其中一种结果，容量为一，不能分别流向两支球队去修改各自的收益。又不可增大原来决定结果的三条边的流量，因为这样会出现，流同时流向两种结果的情况，不合法。<br>    所以，我们只修改获胜球队(或失败球队)的收益。最初，我们先将一个球队的总收益算成接下来都会输的结果，这样每赢一场增加的收益就是Ci×((n+1)^2-n^2)- Di×((m+1)^2-m^2)，问题就解决了。</p>
+<h3 id="剪刀石头布"><a href="#剪刀石头布" class="headerlink" title="剪刀石头布"></a>剪刀石头布</h3><p><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=2597" target="_blank" rel="external">传送门</a><br>题解：<br>此题和上一题的思路相同。<br>需要注意到的是，对于任意三个人来说只有两种情况。三个人形成一个环，题中所示。其中一个战胜了另外两个人，另两个人随便。<br>所以最后环的数目为，所有三个人的组合减去∑(i 1~n)c(f[i],2)，其中f[i]为第i个人战胜的人的数量。<br>这样对于i来说，赢第n个人，环总数就需要减去n-1.<br>所以仍需对赢第n个人建一条边。但输了的话不需要修改结果，所以无需将输赢结果合并，赢了直接修改。</p>
+<h1 id="总结？"><a href="#总结？" class="headerlink" title="总结？"></a>总结？</h1><p><del>其实上面这一圈全是Ctrl+c&amp;Ctrl+v来的</del><br>如果我还能打出来这些题的话，我就粘代码= =<br><del>听得一脸茫然啊喂</del></p>
+<h1 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h1><p>据说dalao就是聪聪，那么聪聪是谁呢~<br><a href="http://cogs.pro/cogs/problem/problem.php?pid=2320" target="_blank" rel="external">聪聪的世界</a><br><del>嘿嘿嘿~（话说这样会不会被打死QAQ）</del></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/28/26/" rel="next" title="暑假集训D4总结">
+                <i class="fa fa-chevron-left"></i> 暑假集训D4总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/29/28/" rel="prev" title="暑假集训D5总结">
+                暑假集训D5总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://hzoi-mafia.github.io/5875.png"
+               alt="MAFIA" />
+          <p class="site-author-name" itemprop="name">MAFIA</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Maplers/" title="我神奇的同桌hww" target="_blank">我神奇的同桌hww</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wildrage.cf/" title="大佬WXH" target="_blank">大佬WXH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/rvalue/" title="高一学长zhang司机" target="_blank">高一学长zhang司机</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/TSHugh/" title="大佬WQ" target="_blank">大佬WQ</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/LadyLex/" title="又一个大佬ZZH" target="_blank">又一个大佬ZZH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuohao.me" title="壕YZH" target="_blank">壕YZH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/ren_ivan/" title="756最帅的ryf" target="_blank">756最帅的ryf</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/radioteletscope/" title="小姨子xyz" target="_blank">小姨子xyz</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/zyf_2002" title="zyf_2002" target="_blank">zyf_2002</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Loser-of-Life/" title="interesting_byb" target="_blank">interesting_byb</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/hallmeow" title="Hallmeow's blog" target="_blank">Hallmeow's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/FOXYY/" title="hyy大佬" target="_blank">hyy大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/h_anonymity" title="ljm大佬" target="_blank">ljm大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qty2001" title="QTY's blog" target="_blank">QTY's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/forevergoodboy/" title="一哥QSY" target="_blank">一哥QSY</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/A-LEAF" title="mk(quan kai)大佬" target="_blank">mk(quan kai)大佬</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网络流"><span class="nav-number">1.</span> <span class="nav-text">网络流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本定义"><span class="nav-number">1.1.</span> <span class="nav-text">基本定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可行流"><span class="nav-number">1.2.</span> <span class="nav-text">可行流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增广路"><span class="nav-number">1.3.</span> <span class="nav-text">增广路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">1.3.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">1.3.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#依据"><span class="nav-number">1.3.3.</span> <span class="nav-text">依据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现过程"><span class="nav-number">1.3.4.</span> <span class="nav-text">实现过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EdmondsKarp"><span class="nav-number">1.3.5.</span> <span class="nav-text">EdmondsKarp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dinic"><span class="nav-number">1.3.6.</span> <span class="nav-text">Dinic</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大流"><span class="nav-number">1.4.</span> <span class="nav-text">最大流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#搭配飞行员"><span class="nav-number">1.4.1.</span> <span class="nav-text">搭配飞行员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#士兵占领"><span class="nav-number">1.4.2.</span> <span class="nav-text">士兵占领</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分子切割"><span class="nav-number">1.4.3.</span> <span class="nav-text">分子切割</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#紧急疏散"><span class="nav-number">1.4.4.</span> <span class="nav-text">紧急疏散</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Collector’s-Problem"><span class="nav-number">1.4.5.</span> <span class="nav-text">Collector’s Problem</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最小割"><span class="nav-number">1.5.</span> <span class="nav-text">最小割</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.5.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求解最小割基于一个事实：最小割等于最大流"><span class="nav-number">1.5.2.</span> <span class="nav-text">求解最小割基于一个事实：最小割等于最大流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#王者之剑"><span class="nav-number">1.5.3.</span> <span class="nav-text">王者之剑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#happiness"><span class="nav-number">1.5.4.</span> <span class="nav-text">happiness</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#人员雇佣"><span class="nav-number">1.5.5.</span> <span class="nav-text">人员雇佣</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切糕"><span class="nav-number">1.5.6.</span> <span class="nav-text">切糕</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#费用流"><span class="nav-number">1.6.</span> <span class="nav-text">费用流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最小费用最大流"><span class="nav-number">1.6.1.</span> <span class="nav-text">最小费用最大流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#餐巾"><span class="nav-number">1.6.2.</span> <span class="nav-text">餐巾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#球队收益"><span class="nav-number">1.6.3.</span> <span class="nav-text">球队收益</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#剪刀石头布"><span class="nav-number">1.6.4.</span> <span class="nav-text">剪刀石头布</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结？"><span class="nav-number">2.</span> <span class="nav-text">总结？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#彩蛋"><span class="nav-number">3.</span> <span class="nav-text">彩蛋</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MAFIA</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

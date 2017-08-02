@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="true" />
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="h2qjQiP1Gp" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="笛卡尔树," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="题目Treap是一种平衡二叉搜索树，除二叉搜索树的基本性质外，Treap还满足一个性质：">
+<meta name="keywords" content="笛卡尔树">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[HZOI 2016]简单的Treap">
+<meta property="og:url" content="http://yoursite.com/2017/07/26/16/index.html">
+<meta property="og:site_name" content="MAFIA&#39;s Blog">
+<meta property="og:description" content="题目Treap是一种平衡二叉搜索树，除二叉搜索树的基本性质外，Treap还满足一个性质：">
+<meta property="og:updated_time" content="2017-07-26T13:05:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[HZOI 2016]简单的Treap">
+<meta name="twitter:description" content="题目Treap是一种平衡二叉搜索树，除二叉搜索树的基本性质外，Treap还满足一个性质：">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/26/16/"/>
+
+
+
+
+
+  <title>[HZOI 2016]简单的Treap | MAFIA's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1a9fed8865999460790b51cb2cc3ec9e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MAFIA's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/26/16/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MAFIA">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://hzoi-mafia.github.io/5875.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MAFIA's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">[HZOI 2016]简单的Treap</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-26T07:36:45+08:00">
+                2017-07-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/题解/" itemprop="url" rel="index">
+                    <span itemprop="name">题解</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>Treap是一种平衡二叉搜索树，除二叉搜索树的基本性质外，Treap还满足一个性质：  <a id="more"></a><br>每个节点都有一个确定的优先级，且每个节点的优先级都比它的两个儿子小(即它的优先级满足堆性质)。<br>不难证明在节点的优先级都事先给定且互不相同时，对应的Treap有且仅有一个。<br>现在，给定n个数和每个数对应的优先级，求出对应的以数的大小作为二叉搜索树比较依据的Treap的先序遍历结果。<br>对先序遍历的定义是：先访问根节点，再访问左子树，最后访问右子树。  </p>
+<h1 id="INPUT"><a href="#INPUT" class="headerlink" title="INPUT"></a>INPUT</h1><p>第一行一个数n表示数的个数。<br>第二行n个数表示每个数的大小。<br>第三行n个数表示每个数对应的优先级。  </p>
+<h1 id="OUTPUT"><a href="#OUTPUT" class="headerlink" title="OUTPUT"></a>OUTPUT</h1><p>一行n个数，表示Treap的先序遍历结果(对于每个节点，输出对应的数)。</p>
+<h1 id="SAMPLE"><a href="#SAMPLE" class="headerlink" title="SAMPLE"></a>SAMPLE</h1><h2 id="INPUT-1"><a href="#INPUT-1" class="headerlink" title="INPUT"></a>INPUT</h2><p>7<br>2 11 5 9 1 4 3<br>2 10 1 8 4 6 5</p>
+<h2 id="OUTPUT-1"><a href="#OUTPUT-1" class="headerlink" title="OUTPUT"></a>OUTPUT</h2><p>5 2 1 3 4 9 11</p>
+<h1 id="解题报告"><a href="#解题报告" class="headerlink" title="解题报告"></a>解题报告</h1><p>不要相信题目名称！！！<br>这题卡Treap，用Treap会T掉俩点，那么我们就需要黑科技——笛卡尔树来解决问题了。  </p>
+<h2 id="笛卡尔树"><a href="#笛卡尔树" class="headerlink" title="笛卡尔树"></a>笛卡尔树</h2><p>笛卡尔树是一种同时满足二叉搜索树和堆的性质的数据结构。 可在一个数组上构造出来（时间复杂度可以达到O(n))。树中节点有几个属性， key（节点元素的大小）、index（节点在原数组中的索引）、left（左子节点）、right（右子节点）、parent（父节点）。</p>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>树中的元素满足二叉搜索树性质，要求按照中序遍历得到的序列为原数组序列<br>树中节点满足堆性质，节点的key值要大于其左右子节点的key值</p>
+<h3 id="构造"><a href="#构造" class="headerlink" title="构造"></a>构造</h3><p>要求在给定的数组的基础上构造一棵笛卡尔树，这可以在O(n)的时间内完成。 其具体思路为：<br>当按照index从1到n（或者从0到n-1）的顺序将数组中的每个元素插入到笛卡尔树中时，当前要被插入的元素的index值最大，因此根据二叉搜索的性质需要沿着当前已经完成的笛卡尔树的根的右子树链搜索。<br>由于笛卡尔树要满足堆的性质（以最大堆为例），父节点的key值要大于子节点的key值，所以沿着树根的右子树链往下走，直到搜索到的节点的key值小于等于当前要插入节点的key值。<br>此时，便找到了当前结点需要插入的位置，记为P。此时P下方的节点的key值肯定小于当前被插入节点的key，但是index也小于当前插入节点的index（即需要在二叉搜索树中当前结点之前的位置），所以将当前节点插入到P的位置，同时将以P为根的子树挂载到新插入的节点的左子树（为了保证P及其子树在新插入节点之前被二叉搜索）。<br>实际实现的时候，可以采用栈的数据结构。栈中保存当前树中的从树根开始的右子节点链，根在栈底部。<br>插入新元素的时候，从树的右子链的最末尾从下往上查找，直到找到第一个满足堆性质的节点（即找到的节点的key值大于当前需要插入的节点）。用栈来实现就是从栈顶不断弹出元素，直到栈顶的元素的key大于当前结点的key，然后将该节点入栈，同时将最后被弹出的节点的parent指向该节点，以及该节点的左子节点指向最后被弹出的节点。<br>复杂度分析： 每个节点最多入栈一次，出栈一次，因此时间复杂度为 O(n)  </p>
+<p><del>ps:其实没那么麻烦= =，几个数组乱抡就可以了</del>  </p>
+<p>那么剩下的就很简单了，按关键字排个序，建树，然后乱搞- -<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">#include&lt;algorithm&gt;</div><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">using namespace std;</div><div class="line">inline int read()&#123;</div><div class="line">	int sum(0);</div><div class="line">	char ch(getchar());</div><div class="line">	while(ch&lt;'0'||ch&gt;'9')</div><div class="line">		ch=getchar();</div><div class="line">	while(ch&gt;='0'&amp;&amp;ch&lt;='9')&#123;</div><div class="line">		sum=sum*10+ch-'0';</div><div class="line">		ch=getchar();</div><div class="line">	&#125;</div><div class="line">	return sum;</div><div class="line">&#125;</div><div class="line">struct node&#123;</div><div class="line">	int val,key;//val为数的大小，key为优先级- -</div><div class="line">	bool operator&lt;(const node &amp;a)const&#123;</div><div class="line">		return val&lt;a.val;</div><div class="line">	&#125;</div><div class="line">&#125;a[500001];</div><div class="line">int n;</div><div class="line">int stack[500001],top(0);</div><div class="line">int root,lc[500001],rc[500001];</div><div class="line">inline void print(int u)&#123;</div><div class="line">	if(u==0)</div><div class="line">		return;</div><div class="line">	printf("%d ",a[u].val);</div><div class="line">	print(lc[u]);</div><div class="line">	print(rc[u]);</div><div class="line">&#125;</div><div class="line">int main()&#123;</div><div class="line">	freopen("treap.in","r",stdin);</div><div class="line">	freopen("treap.out","w",stdout);</div><div class="line">	int __size__=128&lt;&lt;20;</div><div class="line">	char *__p__=(char*)malloc(__size__)+__size__;</div><div class="line">	__asm__("movl %0, %%esp\n"::"r"(__p__));</div><div class="line">	n=read();</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		a[i].val=read();</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		a[i].key=read();</div><div class="line">	sort(a+1,a+n+1);</div><div class="line">	for(int i=1;i&lt;=n;i++)&#123;</div><div class="line">		stack[top+1]=0;</div><div class="line">		while(top&amp;&amp;a[stack[top]].key&gt;a[i].key)</div><div class="line">			top--;</div><div class="line">		lc[i]=stack[top+1];</div><div class="line">		if(top==0)</div><div class="line">			root=i;</div><div class="line">		else</div><div class="line">			rc[stack[top]]=i;</div><div class="line">		stack[++top]=i;</div><div class="line">	&#125;</div><div class="line">	print(root);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笛卡尔树/" rel="tag"># 笛卡尔树</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/25/15/" rel="next" title="暑假集训D1总结">
+                <i class="fa fa-chevron-left"></i> 暑假集训D1总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/26/17/" rel="prev" title="2017-7-26 大佬讲课笔记">
+                2017-7-26 大佬讲课笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://hzoi-mafia.github.io/5875.png"
+               alt="MAFIA" />
+          <p class="site-author-name" itemprop="name">MAFIA</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Maplers/" title="我神奇的同桌hww" target="_blank">我神奇的同桌hww</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wildrage.cf/" title="大佬WXH" target="_blank">大佬WXH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/rvalue/" title="高一学长zhang司机" target="_blank">高一学长zhang司机</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/TSHugh/" title="大佬WQ" target="_blank">大佬WQ</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/LadyLex/" title="又一个大佬ZZH" target="_blank">又一个大佬ZZH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuohao.me" title="壕YZH" target="_blank">壕YZH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/ren_ivan/" title="756最帅的ryf" target="_blank">756最帅的ryf</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/radioteletscope/" title="小姨子xyz" target="_blank">小姨子xyz</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/zyf_2002" title="zyf_2002" target="_blank">zyf_2002</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Loser-of-Life/" title="interesting_byb" target="_blank">interesting_byb</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/hallmeow" title="Hallmeow's blog" target="_blank">Hallmeow's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/FOXYY/" title="hyy大佬" target="_blank">hyy大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/h_anonymity" title="ljm大佬" target="_blank">ljm大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qty2001" title="QTY's blog" target="_blank">QTY's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/forevergoodboy/" title="一哥QSY" target="_blank">一哥QSY</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/A-LEAF" title="mk(quan kai)大佬" target="_blank">mk(quan kai)大佬</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#INPUT"><span class="nav-number">2.</span> <span class="nav-text">INPUT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OUTPUT"><span class="nav-number">3.</span> <span class="nav-text">OUTPUT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SAMPLE"><span class="nav-number">4.</span> <span class="nav-text">SAMPLE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#INPUT-1"><span class="nav-number">4.1.</span> <span class="nav-text">INPUT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OUTPUT-1"><span class="nav-number">4.2.</span> <span class="nav-text">OUTPUT</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题报告"><span class="nav-number">5.</span> <span class="nav-text">解题报告</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#笛卡尔树"><span class="nav-number">5.1.</span> <span class="nav-text">笛卡尔树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#性质"><span class="nav-number">5.1.1.</span> <span class="nav-text">性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造"><span class="nav-number">5.1.2.</span> <span class="nav-text">构造</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MAFIA</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

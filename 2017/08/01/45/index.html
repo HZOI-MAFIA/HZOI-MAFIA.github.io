@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="true" />
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="h2qjQiP1Gp" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="背景作为一名川娃子，怎么能不懂麻将呢= =">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从OI学麻将">
+<meta property="og:url" content="http://yoursite.com/2017/08/01/45/index.html">
+<meta property="og:site_name" content="MAFIA&#39;s Blog">
+<meta property="og:description" content="背景作为一名川娃子，怎么能不懂麻将呢= =">
+<meta property="og:image" content="http://cogs.pro/images/upload/image/20120707/20120707210626_51618.png">
+<meta property="og:updated_time" content="2017-08-01T11:20:13.940Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="从OI学麻将">
+<meta name="twitter:description" content="背景作为一名川娃子，怎么能不懂麻将呢= =">
+<meta name="twitter:image" content="http://cogs.pro/images/upload/image/20120707/20120707210626_51618.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/01/45/"/>
+
+
+
+
+
+  <title>从OI学麻将 | MAFIA's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1a9fed8865999460790b51cb2cc3ec9e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MAFIA's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/01/45/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MAFIA">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://hzoi-mafia.github.io/5875.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MAFIA's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">从OI学麻将</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-01T19:19:55+08:00">
+                2017-08-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>作为一名川娃子，怎么能不懂麻将呢= =<br><a id="more"></a></p>
+<h1 id="T1-さきなに"><a href="#T1-さきなに" class="headerlink" title="T1 さきなに~~"></a>T1 さきなに~~</h1><p><a href="http://cogs.pro/cogs/problem/problem.php?pid=898" target="_blank" rel="external">[咲 -Saki-] 天才麻将少女什么编</a>    </p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>二十一世纪，世界上的麻将竞技人数超过一亿，日本每年也有大规模的全国大赛来对麻将选手进行选拔。从小学到高中，很多学校也设立了麻将部。<br>《天才麻将少女阿知贺篇 episode of side-A》『咲 -Saki- 阿知賀編 episode of side-A』是《天才麻将少女》『咲 -Saki-』的外传，从另一个视角讲述麻将少女们的故事。故事背景设定在《天才麻将少女》本篇第二主角原村和曾生活的奈良县，主角校为阿知贺女子学院。（有问题？内事百度，外事谷歌）<br>由于阿知贺人物存在感不够强，导致该作被称为“千里山篇”「怜 -Toki- 千里山編」，甚至 2012 年动画最萌也是千里山的園城寺怜同学。我们一直很疑惑这到底谁是主角，那么就让数据说话吧！</p>
+<h3 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h3><p>我们给出一个人物列表，人物有其所属的学校。比如「松実玄」同学隶属「阿知賀女子学院」什么的。有的人物没有所属学校或没有明确给出其所属，可以无视。<br>人物每一次出场都会给其学校增加一点存在感。有少数“被牌爱着的孩子”，即“魔物”会有非常高的存在感，出场一次会有普通人出场两次的存在感。<br>我们需要统计，在给出的人物出场单中，哪个学校存在感最高，我们就把这篇动画命名为什么编。</p>
+<h2 id="INPUT"><a href="#INPUT" class="headerlink" title="INPUT"></a>INPUT</h2><ul>
+<li>输入文件第一行为一个整数 n ，表示有多少人物出现。下面 n 行是人物列表，每两行有两个字符串 A 和 B ，表示人物 A 属于学校 B 。没有同名人物，不会重复出现人物。</li>
+<li>下面一行一个整数 k ，表示魔物的数量。接下来 k 行，每行一个字符串，表示魔物的姓名，不保证魔物在人物列表中。</li>
+<li>接下来直到文件末尾，每行有一个字符串（空行不算），表示出场人物，可能会出现不存在于上面列表中的人物。<h2 id="OUTPUT"><a href="#OUTPUT" class="headerlink" title="OUTPUT"></a>OUTPUT</h2>输出只有一行，即存在感最大的学校名称，并列第一则输出编码序小的一个。<h2 id="SAMPLE"><a href="#SAMPLE" class="headerlink" title="SAMPLE"></a>SAMPLE</h2><h3 id="INPUT-1"><a href="#INPUT-1" class="headerlink" title="INPUT"></a>INPUT</h3>7<br>宮永咲 清澄高校<br>原村和 清澄高校<br>片岡優希 清澄高校<br>園城寺怜 千里山女子高校<br>竹井久 清澄高校<br>天江衣 龍門渕高校<br>龍門渕透華 龍門渕高校<br>2<br>宮永咲<br>天江衣  </li>
+</ul>
+<p>原村和<br>高鴨穏乃<br>原村和<br>片岡優希<br>原村和<br>宮永咲  </p>
+<h3 id="OUTPUT-1"><a href="#OUTPUT-1" class="headerlink" title="OUTPUT"></a>OUTPUT</h3><p>清澄高校</p>
+<h2 id="解题报告"><a href="#解题报告" class="headerlink" title="解题报告"></a>解题报告</h2><p>其实T1跟麻将没啥关系= =<br>map与string各种练手就好了<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;map&gt;</div><div class="line">using namespace std;</div><div class="line">map&lt;int,string&gt;n_sch;</div><div class="line">map&lt;string,int&gt;peo;</div><div class="line">map&lt;string,int&gt;sch;</div><div class="line">int bl[233];</div><div class="line">int n,k;</div><div class="line">string a,b;</div><div class="line">int cnt;</div><div class="line">int w[233],sum[233];</div><div class="line">inline int gg()&#123;</div><div class="line">	freopen("sakinani.in","r",stdin);</div><div class="line">	freopen("sakinani.out","w",stdout);</div><div class="line">	scanf("%d",&amp;n);</div><div class="line">	for(int i=1;i&lt;=n;i++)&#123;</div><div class="line">		cin&gt;&gt;a&gt;&gt;b;</div><div class="line">		w[i]=1;</div><div class="line">		peo[a]=i;</div><div class="line">		if(!sch[b])</div><div class="line">			sch[b]=++cnt,n_sch[cnt]=b;</div><div class="line">		bl[i]=sch[b];</div><div class="line">	&#125;</div><div class="line">	scanf("%d",&amp;k);</div><div class="line">	for(int i=1;i&lt;=k;i++)&#123;</div><div class="line">		cin&gt;&gt;a;</div><div class="line">		if(peo.count(a))</div><div class="line">			w[peo[a]]=2;</div><div class="line">	&#125;</div><div class="line">	while(cin&gt;&gt;a)&#123;</div><div class="line">		if(!peo.count(a))</div><div class="line">			continue;</div><div class="line">		sum[bl[peo[a]]]+=w[peo[a]];</div><div class="line">	&#125;</div><div class="line">	int mx(0),ans;</div><div class="line">	for(int i=1;i&lt;=cnt;i++)&#123;</div><div class="line">		if(sum[i]==mx&amp;&amp;n_sch[i]&lt;n_sch[ans])</div><div class="line">			ans=i;</div><div class="line">		if(sum[i]&gt;mx)</div><div class="line">			mx=sum[i],ans=i;</div><div class="line">	&#125;</div><div class="line">	cout&lt;&lt;n_sch[ans];</div><div class="line">	return 0;</div><div class="line">&#125;</div><div class="line">int K(gg());</div><div class="line">int main()&#123;;&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="T2-简单的麻将"><a href="#T2-简单的麻将" class="headerlink" title="T2 简单的麻将"></a>T2 简单的麻将</h1><p><a href="http://cogs.pro/cogs/problem/problem.php?pid=844" target="_blank" rel="external">[DreamTeam]麻将</a>  </p>
+<h2 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h2><p>题目描述：<br>DreamTeam 成员每天晚上的必修课当然是打麻将!<br>可是Geer每次打完都是输(因为她刚学会打麻将,经常瞎和(音胡，意即赢得胜利),该和不和—-输了又要请大家喝奶茶)<br>但是Geer不服输,又仗着自己学了几天编程,自以为不得了!<br>于是她决定遍写一个程序来,提高自己对麻将的熟悉程度!(避免少输点);  </p>
+<p>不会打麻将的要耽误点时间看了(会打的阴到笑).. 21世纪..还有人不会打麻将(偶5岁就会,第一次帮我爸打了一盘还赢了5元钱…表鄙视我!):<br>麻将总共108张     筒,条,万 分别有4张一样的  1..9<br>如  1筒4张 1条4张  1万4张  2筒4张 2条4张…….  9筒4张 9条4张 9万4张 没了!  3×4×9=108  没错吧!<br>图形：<img src="http://cogs.pro/images/upload/image/20120707/20120707210626_51618.png" alt="0"><br>字符：W1 W2 W3 T1 T2 T3 W9 W9 W9 T7 T8 T9 T9 T9 此样例表示已经胡了！！！<br>例如：3个连续的并且都全部属于 万或条或筒 叫做一个 搭子吧  3个一样的 也叫一个搭子吧 要想和牌 还必须有一个对子（就是2个一样的）<br>如上面就是前12张牌就是4个搭子 后面2个9筒叫对子！ 就算和牌了！<br>唯一的特殊情况就是7个对子也算和（巧七对）<br> 注意：要和牌必须4个搭子1个对子或者7个对子！</p>
+<p>开始Geer只有13牌<br>如：样例假如第一张1万开始的时候没有 则刚好13张，你要输出的结果就是他还需要一张什么牌他才能和牌 这样他继可以和1万 也可以和4万  </p>
+<p>W2：表示2万   T1：表示1筒   D3：表示3条</p>
+<h2 id="INPUT-2"><a href="#INPUT-2" class="headerlink" title="INPUT"></a>INPUT</h2><p>13张牌，每张一个空格；（最后那张没空格）</p>
+<h2 id="OUTPUT-2"><a href="#OUTPUT-2" class="headerlink" title="OUTPUT"></a>OUTPUT</h2><p>如何再需要一张能和牌 输出这张牌的所有可能性（注意空格，输出的结果数字小的写到前面 ）  如果再要一张也不能和牌，则输出“NO!”</p>
+<h2 id="SAMPLE-1"><a href="#SAMPLE-1" class="headerlink" title="SAMPLE"></a>SAMPLE</h2><h3 id="INPUT-3"><a href="#INPUT-3" class="headerlink" title="INPUT"></a>INPUT</h3><p>W2 W3 T1 T2 T3 W9 W9 W9 T7 T7 T9 T9 T9</p>
+<h3 id="OUTPUT-3"><a href="#OUTPUT-3" class="headerlink" title="OUTPUT"></a>OUTPUT</h3><p>W1 W4</p>
+<h2 id="解题报告-1"><a href="#解题报告-1" class="headerlink" title="解题报告"></a>解题报告</h2><p>暴搜就好，可以参考一下<a href="http://hzoi-mafia.github.io/2017/7/30/30" target="_blank" rel="external">斗地主</a><br>显然，没有风牌、箭牌、还有奇奇怪怪的春夏秋冬梅兰竹菊= =，总共只有3×9=27种牌，那么我们枚举这27种牌，看得到它们后能不能和<br>判断的时候暴搜一波，判断一下搭子与巧七对即可<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">using namespace std;</div><div class="line">int a[5][10],sum[5];</div><div class="line">char ch[3],ans[5];</div><div class="line">inline bool qiaoqidui()&#123;</div><div class="line">	for(int i=1;i&lt;=3;i++)</div><div class="line">		for(int j=1;j&lt;=9;j++)</div><div class="line">			if(a[i][j]&amp;&amp;a[i][j]!=2)</div><div class="line">				return false;</div><div class="line">	return true;</div><div class="line">&#125;</div><div class="line">bool vis[5][10];</div><div class="line">inline void judge(int x,int y)&#123;</div><div class="line">	if(vis[x][y])</div><div class="line">		return;</div><div class="line">	vis[x][y]=1;</div><div class="line">	for(int i=1;i&lt;=3;i++)</div><div class="line">		for(int j=1;j&lt;=9;j++)</div><div class="line">			if(a[i][j])</div><div class="line">				return;</div><div class="line">	printf("%c%d ",ans[x],y);</div><div class="line">&#125;</div><div class="line">inline void dfs(int,int,bool,int,int);</div><div class="line">inline void shun(int col,int sm,bool dui,int x,int y)&#123;</div><div class="line">	for(int i=1;i&lt;=7;i++)&#123;</div><div class="line">		if(a[col][i]&amp;&amp;a[col][i+1]&amp;&amp;a[col][i+2])&#123;</div><div class="line">			a[col][i]--,a[col][i+1]--,a[col][i+2]--;</div><div class="line">			dfs(col,sm-3,dui,x,y);</div><div class="line">			a[col][i]++,a[col][i+1]++,a[col][i+2]++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">inline void tri(int col,int sm,bool dui,int x,int y)&#123;</div><div class="line">	for(int i=1;i&lt;=9;i++)</div><div class="line">		if(a[col][i]==3)</div><div class="line">			a[col][i]=0,dfs(col,sm-3,dui,x,y),a[col][i]=3;</div><div class="line">&#125;</div><div class="line">inline void du(int col,int sm,bool dui,int x,int y)&#123;</div><div class="line">	for(int i=1;i&lt;=9;i++)</div><div class="line">		if(a[col][i]==2)</div><div class="line">			a[col][i]=0,dfs(col,sm-2,dui,x,y),a[col][i]=2;</div><div class="line">&#125;</div><div class="line">inline void dfs(int col,int sm,bool dui,int x,int y)&#123;</div><div class="line">	if(vis[x][y])</div><div class="line">		return;</div><div class="line">	if(col==4)&#123;</div><div class="line">		judge(x,y);</div><div class="line">		return;</div><div class="line">	&#125;</div><div class="line">	if(!sm)&#123;</div><div class="line">		dfs(col+1,sum[col+1],dui,x,y);</div><div class="line">		return;</div><div class="line">	&#125;</div><div class="line">	if(sm&gt;=3)</div><div class="line">		shun(col,sm,dui,x,y),tri(col,sm,dui,x,y);</div><div class="line">	else</div><div class="line">		if(!dui&amp;&amp;sm&gt;=2)</div><div class="line">			du(col,sm,1,x,y);</div><div class="line">		else</div><div class="line">			return;</div><div class="line">&#125;</div><div class="line">inline int gg()&#123;</div><div class="line">	freopen("majiang.in","r",stdin);</div><div class="line">	freopen("majiang.out","w",stdout);</div><div class="line">	ans[1]='W',ans[2]='T',ans[3]='D';</div><div class="line">	for(int i=1;i&lt;=13;i++)&#123;</div><div class="line">		scanf("%s",ch);</div><div class="line">		if(ch[0]=='W')</div><div class="line">			a[1][ch[1]-'0']++,sum[1]++;</div><div class="line">		if(ch[0]=='T')</div><div class="line">			a[2][ch[1]-'0']++,sum[2]++;</div><div class="line">		if(ch[0]=='D')</div><div class="line">			a[3][ch[1]-'0']++,sum[3]++;</div><div class="line">	&#125;</div><div class="line">	for(int i=1;i&lt;=3;i++)</div><div class="line">		for(int j=1;j&lt;=9;j++)&#123;</div><div class="line">			a[i][j]++,sum[i]++;</div><div class="line">			if(qiaoqidui())&#123;</div><div class="line">				vis[i][j]=1;</div><div class="line">				printf("%c%d ",ans[i],j);</div><div class="line">				continue;</div><div class="line">			&#125;</div><div class="line">			dfs(1,sum[1],0,i,j);</div><div class="line">			a[i][j]--,sum[i]--;</div><div class="line">		&#125;</div><div class="line">	for(int i=1;i&lt;=3;i++)</div><div class="line">		for(int j=1;j&lt;=9;j++)</div><div class="line">			if(vis[i][j])</div><div class="line">				return 0;</div><div class="line">	puts("NO!");</div><div class="line">	return 0;</div><div class="line">&#125;</div><div class="line">int K(gg());</div><div class="line">int main()&#123;;&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="T3-更强的麻将"><a href="#T3-更强的麻将" class="headerlink" title="T3 更强的麻将"></a>T3 更强的麻将</h1><p><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=24&amp;page=show_problem&amp;problem=2151" target="_blank" rel="external">UVa 11210 Chinese mahjong</a><br>比T2多了风牌与箭牌，然而还是没有春夏秋冬梅兰竹菊= =<br>由于没有UVa号，就不贴题目与标程了= =<del>（是根本就没有吧啊喂）</del></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>所以我到底学会没有呢？<br>我猜我是学会了吧= =</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/01/44/" rel="next" title="[ZJOI2007] 报表统计">
+                <i class="fa fa-chevron-left"></i> [ZJOI2007] 报表统计
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/01/46/" rel="prev" title="暑假集训D8总结">
+                暑假集训D8总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://hzoi-mafia.github.io/5875.png"
+               alt="MAFIA" />
+          <p class="site-author-name" itemprop="name">MAFIA</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Maplers/" title="我神奇的同桌hww" target="_blank">我神奇的同桌hww</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wildrage.cf/" title="大佬WXH" target="_blank">大佬WXH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/rvalue/" title="高一学长zhang司机" target="_blank">高一学长zhang司机</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/TSHugh/" title="大佬WQ" target="_blank">大佬WQ</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/LadyLex/" title="又一个大佬ZZH" target="_blank">又一个大佬ZZH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhuohao.me" title="壕YZH" target="_blank">壕YZH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/ren_ivan/" title="756最帅的ryf" target="_blank">756最帅的ryf</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/radioteletscope/" title="小姨子xyz" target="_blank">小姨子xyz</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/zyf_2002" title="zyf_2002" target="_blank">zyf_2002</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/Loser-of-Life/" title="interesting_byb" target="_blank">interesting_byb</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/hallmeow" title="Hallmeow's blog" target="_blank">Hallmeow's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/FOXYY/" title="hyy大佬" target="_blank">hyy大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/h_anonymity" title="ljm大佬" target="_blank">ljm大佬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qty2001" title="QTY's blog" target="_blank">QTY's blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/forevergoodboy/" title="一哥QSY" target="_blank">一哥QSY</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/A-LEAF" title="mk(quan kai)大佬" target="_blank">mk(quan kai)大佬</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#T1-さきなに"><span class="nav-number">2.</span> <span class="nav-text">T1 さきなに~~</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">2.1.</span> <span class="nav-text">题目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目要求"><span class="nav-number">2.1.1.</span> <span class="nav-text">题目要求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INPUT"><span class="nav-number">2.2.</span> <span class="nav-text">INPUT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OUTPUT"><span class="nav-number">2.3.</span> <span class="nav-text">OUTPUT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SAMPLE"><span class="nav-number">2.4.</span> <span class="nav-text">SAMPLE</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#INPUT-1"><span class="nav-number">2.4.1.</span> <span class="nav-text">INPUT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OUTPUT-1"><span class="nav-number">2.4.2.</span> <span class="nav-text">OUTPUT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题报告"><span class="nav-number">2.5.</span> <span class="nav-text">解题报告</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#T2-简单的麻将"><span class="nav-number">3.</span> <span class="nav-text">T2 简单的麻将</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目-1"><span class="nav-number">3.1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INPUT-2"><span class="nav-number">3.2.</span> <span class="nav-text">INPUT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OUTPUT-2"><span class="nav-number">3.3.</span> <span class="nav-text">OUTPUT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SAMPLE-1"><span class="nav-number">3.4.</span> <span class="nav-text">SAMPLE</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#INPUT-3"><span class="nav-number">3.4.1.</span> <span class="nav-text">INPUT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OUTPUT-3"><span class="nav-number">3.4.2.</span> <span class="nav-text">OUTPUT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题报告-1"><span class="nav-number">3.5.</span> <span class="nav-text">解题报告</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#T3-更强的麻将"><span class="nav-number">4.</span> <span class="nav-text">T3 更强的麻将</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MAFIA</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
